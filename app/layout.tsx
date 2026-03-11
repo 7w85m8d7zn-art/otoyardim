@@ -1,50 +1,71 @@
 import type { Metadata, Viewport } from "next";
-import Link from "next/link";
-import { Barlow, Bebas_Neue } from "next/font/google";
+import { Manrope, Rajdhani } from "next/font/google";
 import type { ReactNode } from "react";
 
-import { CTASticky } from "@/components/CTASticky";
-import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { siteConfig } from "@/lib/site";
+import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { siteConfig } from "@/data/site";
 
 import "./globals.css";
 
-const headingFont = Bebas_Neue({
-  weight: "400",
-  subsets: ["latin"],
+const displayFont = Rajdhani({
+  subsets: ["latin-ext"],
+  weight: ["500", "600", "700"],
   variable: "--font-display",
 });
 
-const bodyFont = Barlow({
+const bodyFont = Manrope({
+  subsets: ["latin-ext"],
   weight: ["400", "500", "600", "700", "800"],
-  subsets: ["latin"],
   variable: "--font-body",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Şen Oto Lastik | Ortaköy / Aksaray Oto Lastik ve Yol Yardım",
+    default: "Şen Oto Lastik | Aksaray 7/24 Yol Yardım ve Mobil Lastik Servisi",
     template: "%s | Şen Oto Lastik",
   },
   description: siteConfig.description,
-  keywords: siteConfig.keywords,
+  keywords: [
+    "aksaray yol yardım",
+    "ortaköy oto lastik",
+    "mobil lastik servisi",
+    "lastik tamiri",
+    "7/24 lastik değişimi",
+    "jant satışı",
+    "81 ile jant gönderimi",
+  ],
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [{ url: "/sav.ico", type: "image/x-icon" }],
+    shortcut: [{ url: "/sav.ico", type: "image/x-icon" }],
+  },
   openGraph: {
-    title: "Şen Oto Lastik | Ortaköy / Aksaray Oto Lastik ve Yol Yardım",
+    title: "Şen Oto Lastik | Aksaray 7/24 Yol Yardım ve Mobil Lastik Servisi",
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: "tr_TR",
     type: "website",
+    images: [
+      {
+        url: siteConfig.defaultOgImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Şen Oto Lastik | Ortaköy / Aksaray Oto Lastik ve Yol Yardım",
+    title: "Şen Oto Lastik | Aksaray 7/24 Yol Yardım ve Mobil Lastik Servisi",
     description: siteConfig.description,
+    images: [siteConfig.defaultOgImage],
   },
   robots: {
     index: true,
@@ -55,7 +76,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0a0a0b",
+  themeColor: "#0b0b0d",
 };
 
 export default function RootLayout({
@@ -65,27 +86,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <body className={`${headingFont.variable} ${bodyFont.variable} bg-asphalt text-white`}>
+      <body className={`${displayFont.variable} ${bodyFont.variable} bg-asphalt text-white`}>
         <div className="relative min-h-screen overflow-x-clip">
           <Header />
-          <div className="pb-24 md:pb-0">{children}</div>
-          <footer className="border-t border-white/10 bg-black/70">
-            <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm text-slate-400 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-              <p>
-                2026 {siteConfig.name} • Ortaköy / Aksaray oto lastik,
-                mobil servis ve yol yardım hizmetleri
-              </p>
-              <div className="flex flex-wrap gap-4">
-                {siteConfig.footerLinks.map((link) => (
-                  <Link key={link.href} href={link.href}>
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </footer>
-          <FloatingWhatsApp />
-          <CTASticky />
+          <main className="pb-24 md:pb-0">{children}</main>
+          <Footer />
+          <FloatingWhatsAppButton />
+          <StickyMobileCTA />
         </div>
       </body>
     </html>
