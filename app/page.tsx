@@ -4,7 +4,6 @@ import { FAQSection } from "@/components/FAQSection";
 import { GallerySection } from "@/components/GallerySection";
 import { GoogleMapSection } from "@/components/GoogleMapSection";
 import { HeroSection } from "@/components/HeroSection";
-import { JantSalesSection } from "@/components/JantSalesSection";
 import { SchemaMarkup } from "@/components/SchemaMarkup";
 import { ServiceAreaSection } from "@/components/ServiceAreaSection";
 import { ServicesSection } from "@/components/ServicesSection";
@@ -24,7 +23,7 @@ import {
 export const metadata = buildMetadata({
   title: "Aksaray'da 7/24 Yol Yardım ve Mobil Lastik Servisi",
   description:
-    "Şen Oto Lastik; Ortaköy / Aksaray merkezli 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi, oto lastik tamiri, Niğde Otobanı'nda full hizmet ve Türkiye geneli jant gönderimi sunar.",
+    "Şen Oto Lastik; Ortaköy / Aksaray merkezli 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi, oto lastik tamiri ve Niğde Otobanı'nda full hizmet sunar.",
   path: "/",
   image: "/images/aksaray-yol-yardim.jpg",
   keywords: [
@@ -33,8 +32,7 @@ export const metadata = buildMetadata({
     "niğde otobanı yol yardım",
     "ortaköy oto lastik",
     "mobil lastik servisi",
-    "jant satışı",
-    "81 ile jant gönderimi",
+    "lastik tamiri",
   ],
 });
 
@@ -50,7 +48,7 @@ export default function HomePage() {
             type: "local",
             metaTitle: "",
             metaDescription:
-              "Aksaray'da 7/24 yol yardım, mobil lastik servisi, lastik tamiri ve jant satışı.",
+              "Aksaray'da 7/24 yol yardım, mobil lastik servisi, lastik tamiri ve Niğde Otobanı'nda full hizmet.",
             title: "Anasayfa",
             eyebrow: "",
             badge: "",
@@ -81,8 +79,6 @@ export default function HomePage() {
           "Niğde Otobanı'nda full hizmet ve hızlı saha desteği",
           "Ortaköy / Aksaray merkezli saha desteği",
           "7/24 yol yardım ve mobil lastik değişimi",
-          "Hızlı ulaşım, net iletişim, güçlü yerel güven",
-          "Türkiye geneli 81 ile jant gönderimi",
         ]}
         badge="Niğde Otobanı Dahil 7/24 Hizmet"
       />
@@ -91,7 +87,6 @@ export default function HomePage() {
       <VehicleTypesSection />
       <WhyChooseUsSection />
       <ServiceAreaSection />
-      <JantSalesSection />
       <GallerySection />
       <FAQSection groups={homeFaqGroups} />
       <BlogPreviewSection posts={blogPosts} />

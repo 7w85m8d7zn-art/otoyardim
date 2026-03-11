@@ -5,7 +5,6 @@ import { Container } from "@/components/Container";
 import {
   footerBlogLinks,
   footerCityLinks,
-  footerProductLinks,
   footerServiceLinks,
   siteConfig,
   whatsappHref,
@@ -24,12 +23,11 @@ export function Footer() {
               {siteConfig.heritageLabel}
             </p>
             <h2 className="mt-4 font-display text-4xl uppercase leading-[0.95] text-white">
-              Aksaray'da 7/24 yol yardım, Türkiye geneli jant gönderimi
+              Aksaray'da 7/24 yol yardım ve mobil lastik servisi
             </h2>
             <p className="mt-4 text-sm leading-7 text-slate-300">
-              Yerel saha hizmetimizi Aksaray, Ortaköy ve yakın illerde sunuyor; jant siparişlerini
-              ise 81 ile ulaştırıyoruz. Böylece Google ve kullanıcı tarafında iki ayrı hizmet
-              modelini net biçimde anlatıyoruz.
+              Yerel saha hizmetimizi Aksaray, Ortaköy ve Niğde Otobanı hattında sunuyoruz. Site
+              yapısını da tek odak etrafında tuttuk: hızlı çağrı, net lokasyon ve sahada çözüm.
             </p>
             <div className="mt-6 grid gap-3">
               <Link
@@ -60,11 +58,8 @@ export function Footer() {
           </div>
 
           <FooterColumn title="Hizmetler" links={footerServiceLinks} />
-          <FooterColumn title="Jant Sayfaları" links={footerProductLinks} />
-          <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-1">
-            <FooterColumn title="Şehir Sayfaları" links={footerCityLinks} />
-            <FooterColumn title="Blog" links={footerBlogLinks} />
-          </div>
+          <FooterColumn title="Şehir Sayfaları" links={footerCityLinks} />
+          <FooterColumn title="Blog" links={footerBlogLinks} />
         </div>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-slate-400 lg:flex-row lg:items-center lg:justify-between">
@@ -72,7 +67,7 @@ export function Footer() {
             2026 {siteConfig.name}. {siteConfig.foundingYear}'den beri Ortaköy / Aksaray merkezli
             mobil lastik ve yol yardım markası.
           </p>
-          <p>Aksaray ve yakın illerde saha hizmeti, Türkiye geneli 81 ile jant gönderimi.</p>
+          <p>Aksaray, Ortaköy ve Niğde Otobanı hattında aktif saha desteği.</p>
         </div>
       </Container>
     </footer>

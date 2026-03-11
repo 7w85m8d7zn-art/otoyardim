@@ -1,4 +1,4 @@
-import { Clock3, LifeBuoy, Package, Truck, Wrench, Zap } from "lucide-react";
+import { Clock3, LifeBuoy, Truck, Wrench, Zap } from "lucide-react";
 
 import { Container } from "@/components/Container";
 import { trustItems } from "@/data/site";
@@ -9,7 +9,6 @@ const iconMap = {
   wrench: Wrench,
   lifeBuoy: LifeBuoy,
   truck: Truck,
-  package: Package,
 };
 
 export function TrustBar() {

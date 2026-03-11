@@ -138,7 +138,7 @@ export default async function BlogDetailPage({ params }: BlogDetailProps) {
       />
       <CTASection
         title="Sorun teoride kalmasın, gerektiğinde hemen ulaşın"
-        description="Yazıda okuduğunuz konu acil bir duruma dönüştüyse Şen Oto Lastik'e hemen ulaşın. Yol yardım, mobil lastik servisi ve jant siparişi için tek hat aktif."
+        description="Yazıda okuduğunuz konu acil bir duruma dönüştüyse Şen Oto Lastik'e hemen ulaşın. Yol yardım, mobil lastik servisi ve lastik tamiri için tek hat aktif."
       />
       <RelatedLinks
         title="İlgili Hizmet ve İçerikler"

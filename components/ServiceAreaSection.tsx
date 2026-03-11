@@ -1,4 +1,4 @@
-import { Globe2, MapPinned } from "lucide-react";
+import { MapPinned, Truck } from "lucide-react";
 
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -9,15 +9,15 @@ type ServiceAreaSectionProps = {
 };
 
 export function ServiceAreaSection({ compact = false }: ServiceAreaSectionProps) {
-  const icons = [MapPinned, Globe2];
+  const icons = [MapPinned, Truck];
 
   return (
     <section className={compact ? "py-14 sm:py-16" : "py-14 sm:py-20"}>
       <Container>
         <SectionHeading
-          eyebrow="Hizmet Modeli"
-          title="Yerel saha hizmeti ayrı, Türkiye geneli jant gönderimi ayrı"
-          description="Google'ın işletmeyi doğru anlaması için iki modeli açıkça ayırıyoruz: yerel acil servis Aksaray ve yakın şehirler için, jant gönderimi ise Türkiye'nin tamamı için."
+          eyebrow="Hizmet Alanı"
+          title="Aksaray merkezli, Niğde Otobanı dahil aktif saha hizmeti"
+          description="İş modelimizi tek ve net bir hizmet çatısında anlatıyoruz: yerinde lastik desteği, yol yardım ve mobil servis. Böylece hem kullanıcı hem Google tarafında daha temiz bir yapı oluşuyor."
         />
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
           {serviceAreaCards.map((card, index) => {
@@ -51,4 +51,3 @@ export function ServiceAreaSection({ compact = false }: ServiceAreaSectionProps)
     </section>
   );
 }
-

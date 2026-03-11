@@ -25,12 +25,12 @@ export function GoogleMapSection({
                 <strong className="text-white">Çalışma Saatleri:</strong> {siteConfig.hours}
               </p>
               <p className="mt-2">
-                <strong className="text-white">Yerel hizmet alanı:</strong> Aksaray, Ortaköy ve
+                <strong className="text-white">Ana hizmet alanı:</strong> Aksaray, Ortaköy ve
                 yakın şehir güzergahları
               </p>
               <p className="mt-2">
-                <strong className="text-white">Ulusal ürün alanı:</strong> Türkiye geneli 81 ile
-                jant gönderimi
+                <strong className="text-white">Ek saha hattı:</strong> Niğde Otobanı ve uygun
+                geçiş noktaları
               </p>
             </div>
           </div>
@@ -48,4 +48,3 @@ export function GoogleMapSection({
     </section>
   );
 }
-

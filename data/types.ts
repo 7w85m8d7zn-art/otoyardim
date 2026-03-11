@@ -6,26 +6,14 @@ export type LinkItem = {
 export type TrustItem = {
   title: string;
   description: string;
-  icon:
-    | "clock"
-    | "zap"
-    | "wrench"
-    | "lifeBuoy"
-    | "truck"
-    | "package";
+  icon: "clock" | "zap" | "wrench" | "lifeBuoy" | "truck";
 };
 
 export type ServiceCard = {
   title: string;
   description: string;
   href: string;
-  icon:
-    | "lifeBuoy"
-    | "truck"
-    | "wrench"
-    | "refresh"
-    | "disc"
-    | "package";
+  icon: "lifeBuoy" | "truck" | "wrench" | "refresh";
   badge?: string;
 };
 
@@ -57,7 +45,7 @@ export type RelatedLink = {
   description: string;
 };
 
-export type LandingPageType = "service" | "local" | "product";
+export type LandingPageType = "service" | "local";
 
 export type LandingPage = {
   slug: string;
@@ -80,11 +68,6 @@ export type LandingPage = {
   ctaText: string;
   callout: string;
   keywords: string[];
-  schemaProduct?: {
-    name: string;
-    category: string;
-    description: string;
-  };
 };
 
 export type BlogSubSection = {

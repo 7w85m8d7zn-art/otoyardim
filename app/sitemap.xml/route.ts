@@ -11,7 +11,7 @@ export async function GET() {
     ...landingPages.map((page) => ({
       path: `/${page.slug}`,
       priority: page.type === "local" ? "0.9" : "0.8",
-      changefreq: page.type === "product" ? "weekly" : "monthly",
+      changefreq: "monthly",
     })),
     ...blogPosts.map((post) => ({
       path: `/blog/${post.slug}`,
@@ -40,4 +40,3 @@ ${urls
     },
   });
 }
-

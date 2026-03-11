@@ -35,8 +35,7 @@ export const metadata: Metadata = {
     "mobil lastik servisi",
     "lastik tamiri",
     "7/24 lastik değişimi",
-    "jant satışı",
-    "81 ile jant gönderimi",
+    "niğde otobanı yol yardım",
   ],
   alternates: {
     canonical: "/",

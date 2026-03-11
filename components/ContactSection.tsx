@@ -15,7 +15,7 @@ export function ContactSection() {
             <SectionHeading
               eyebrow="İletişim"
               title="Telefon, WhatsApp ve adres bilgisi tek ekranda"
-              description="Bu bölüm, dönüşüm odaklı son temas noktasıdır. Acil çağrı için arama, ürün bilgisi için WhatsApp ve yerel güven için adres-harita birlikte sunulur."
+              description="Bu bölüm dönüşüm odaklı son temas noktasıdır. Acil çağrı için arama, canlı konum paylaşımı için WhatsApp ve yerel güven için adres-harita birlikte sunulur."
             />
             <div className="mt-8 grid gap-4">
               <ContactCard
@@ -28,7 +28,7 @@ export function ContactSection() {
               <ContactCard
                 icon={<MessageCircleMore className="h-5 w-5 text-emerald-400" />}
                 title="WhatsApp"
-                value="Mesaj gönder, konum paylaş, hızlı dönüş al"
+                value="Mesaj gönder, canlı konum paylaş, hızlı dönüş al"
                 href={whatsappHref}
                 cta="WhatsApp'tan Ulaş"
                 external
@@ -55,12 +55,12 @@ export function ContactSection() {
               Dönüşüm Notu
             </p>
             <h3 className="mt-4 font-display text-4xl uppercase leading-[0.95] text-white">
-              Acil servis için arama, jant siparişi için WhatsApp daha hızlıdır
+              Acil servis için arama, konum paylaşımı için WhatsApp daha hızlıdır
             </h3>
             <p className="mt-4 text-sm leading-7 text-slate-300">
-              Acil yol yardım taleplerinde doğrudan arama yapmak en hızlı yöntemdir. Jant siparişi,
-              model sorgusu ve şehir dışı teslimat taleplerinde ise araç bilgisiyle birlikte
-              WhatsApp üzerinden yazmanız süreci daha hızlı netleştirir.
+              Acil yol yardım taleplerinde doğrudan arama yapmak en hızlı yöntemdir. Konum veya yol
+              bilgisi gerekiyorsa WhatsApp üzerinden canlı konum göndermeniz yönlendirme sürecini
+              daha da hızlandırır.
             </p>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               <Link
@@ -81,7 +81,7 @@ export function ContactSection() {
               </Link>
             </div>
             <p className="mt-5 text-sm leading-6 text-slate-400">
-              Harita entegrasyonu ve açık çalışma saati bilgisi, Google Maps tarafında işletme
+              Harita entegrasyonu ve açık çalışma saati bilgisi Google Maps tarafında işletme
               güvenini destekleyen önemli sinyallerdendir.
             </p>
           </div>

@@ -4,7 +4,6 @@ import { Container } from "@/components/Container";
 import { FAQSection } from "@/components/FAQSection";
 import { GoogleMapSection } from "@/components/GoogleMapSection";
 import { HeroSection } from "@/components/HeroSection";
-import { JantSalesSection } from "@/components/JantSalesSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { ServiceAreaSection } from "@/components/ServiceAreaSection";
 import { VehicleTypesSection } from "@/components/VehicleTypesSection";
@@ -15,8 +14,6 @@ type LandingPageTemplateProps = {
 };
 
 export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
-  const isProductPage = page.type === "product";
-
   return (
     <>
       <HeroSection
@@ -88,11 +85,12 @@ export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
         </Container>
       </section>
 
-      {isProductPage ? <JantSalesSection compact /> : <VehicleTypesSection compact />}
+      <VehicleTypesSection compact />
+      <ServiceAreaSection compact />
       <RelatedLinks links={page.relatedLinks} />
       <CTASection title={page.ctaTitle} description={page.ctaText} callout={page.callout} />
       <FAQSection groups={page.faqGroups} />
-      {isProductPage ? <ServiceAreaSection compact /> : <GoogleMapSection />}
+      <GoogleMapSection />
       <ContactSection />
     </>
   );

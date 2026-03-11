@@ -7,19 +7,18 @@ export const siteConfig = {
   heritageLabel: "1980'den beri",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://senotolastik.com",
   description:
-    "Şen Oto Lastik, Ortaköy / Aksaray merkezli 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi, oto lastik tamiri ve Türkiye geneli jant gönderimi sunar.",
+    "Şen Oto Lastik, Ortaköy / Aksaray merkezli 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi, oto lastik tamiri ve Niğde Otobanı dahil yakın hatlarda acil lastik desteği sunar.",
   phoneDisplay: "+90 534 492 70 31",
   phoneHref: "tel:+905344927031",
   whatsappNumber: "905344927031",
   whatsappMessage:
-    "Merhaba, Şen Oto Lastik ile yol yardım, mobil lastik servisi veya jant siparişi hakkında bilgi almak istiyorum.",
+    "Merhaba, Şen Oto Lastik ile yol yardım veya mobil lastik servisi hakkında bilgi almak istiyorum.",
   district: "Ortaköy",
   city: "Aksaray",
   address: "Ortaköy / Aksaray, Türkiye",
   hours: "7/24 Açık",
   country: "Türkiye",
-  serviceArea: "Aksaray ve yakın iller",
-  nationalShipping: "Türkiye geneli 81 il",
+  serviceArea: "Aksaray, Ortaköy, Niğde Otobanı ve yakın güzergahlar",
   mapQuery: "Ortaköy Aksaray Türkiye",
   mapEmbed:
     "https://www.google.com/maps?q=Ortak%C3%B6y%20Aksaray%20T%C3%BCrkiye&output=embed",
@@ -39,7 +38,7 @@ export const navLinks: LinkItem[] = [
   { label: "Anasayfa", href: "/" },
   { label: "Yol Yardım", href: "/yol-yardim" },
   { label: "Mobil Servis", href: "/mobil-lastik-servisi" },
-  { label: "Jant Satışı", href: "/jant-satisi" },
+  { label: "Lastik Tamiri", href: "/lastik-tamiri" },
   { label: "Blog", href: "/blog" },
   { label: "İletişim", href: "/#iletisim" },
 ];
@@ -51,13 +50,6 @@ export const footerServiceLinks: LinkItem[] = [
   { label: "Lastik Değişimi", href: "/lastik-degisimi" },
   { label: "Aksaray Yol Yardım", href: "/aksaray-yol-yardim" },
   { label: "Ortaköy Oto Lastik", href: "/ortakoy-oto-lastik" },
-];
-
-export const footerProductLinks: LinkItem[] = [
-  { label: "Jant Satışı", href: "/jant-satisi" },
-  { label: "Jant Modelleri", href: "/jant-modelleri" },
-  { label: "Jant Fiyatları", href: "/jant-fiyatlari" },
-  { label: "81 İle Jant Gönderimi", href: "/81-ile-jant-gonderimi" },
 ];
 
 export const footerCityLinks: LinkItem[] = [
@@ -75,10 +67,6 @@ export const footerBlogLinks: LinkItem[] = [
     href: "/blog/yolda-lastik-patlarsa-ne-yapilmali",
   },
   {
-    label: "Jant Seçimi Nasıl Yapılır?",
-    href: "/blog/jant-secimi-nasil-yapilir",
-  },
-  {
     label: "Kış Lastiği Ne Zaman Takılır?",
     href: "/blog/kis-lastigi-ne-zaman-takilir",
   },
@@ -90,8 +78,8 @@ export const footerBlogLinks: LinkItem[] = [
 
 export const heroStats = [
   { value: "7/24", label: "Aktif Çağrı Hattı" },
+  { value: "Niğde", label: "Otoban Hattı Desteği" },
   { value: "Ortaköy", label: "Aksaray Merkez Operasyon" },
-  { value: "81 İl", label: "Jant Gönderimi" },
 ];
 
 export const trustItems: TrustItem[] = [
@@ -116,9 +104,9 @@ export const trustItems: TrustItem[] = [
     icon: "lifeBuoy",
   },
   {
-    title: "Türkiye Geneli Jant Gönderimi",
-    description: "81 ile teklif, sipariş ve kargo organizasyonu.",
-    icon: "package",
+    title: "Niğde Otobanı'nda Hizmet",
+    description: "Niğde Otobanı ve yakın geçişlerde aktif saha desteği.",
+    icon: "truck",
   },
 ];
 
@@ -152,19 +140,17 @@ export const serviceCards: ServiceCard[] = [
     icon: "refresh",
   },
   {
-    title: "Jant Satışı",
-    description:
-      "Binek, ticari araç ve SUV modelleri için jant seçenekleri ve teklif hattı.",
-    href: "/jant-satisi",
-    icon: "disc",
+    title: "Aksaray Yol Yardım",
+    description: "Aksaray merkez ve ilçelerde hızlı saha çıkışı ve acil müdahale.",
+    href: "/aksaray-yol-yardim",
+    icon: "lifeBuoy",
   },
   {
-    title: "81 İle Jant Gönderimi",
-    description:
-      "Türkiye geneli sipariş, paketleme ve sevkiyat desteği tek hattan yönetilir.",
-    href: "/81-ile-jant-gonderimi",
-    icon: "package",
-    badge: "Tüm Türkiye",
+    title: "Niğde Otobanı Desteği",
+    description: "Niğde Otobanı'nda full hizmet ve hızlı konum bazlı yönlendirme.",
+    href: "/nigde-yol-yardim",
+    icon: "truck",
+    badge: "Otoban",
   },
 ];
 
@@ -195,9 +181,9 @@ export const whyChooseUsItems = [
       "Stepne değişimi, tamir ve sökme-takma işlemlerini bulunduğunuz konumda tamamlıyoruz.",
   },
   {
-    title: "Aksaray ve çevresine hizmet",
+    title: "Niğde Otobanı dahil yakın hatlar",
     description:
-      "Yerel saha hizmetini yakın illere uzatırken, operasyon merkezimizi Aksaray odaklı yönetiyoruz.",
+      "Aksaray merkezli yapımızı Niğde Otobanı ve yakın şehir geçişlerine kadar uzatıyoruz.",
   },
   {
     title: "Güvenilir lastik ve yol yardım desteği",
@@ -208,32 +194,25 @@ export const whyChooseUsItems = [
 
 export const serviceAreaCards = [
   {
-    title: "Yerel saha hizmeti",
+    title: "Aksaray ve Ortaköy çevresi",
     description:
-      "Yol yardım, mobil lastik servisi, yerinde lastik değişimi ve oto lastik tamiri Aksaray, Ortaköy ve yakın şehirler için sunulur.",
+      "Yol yardım, mobil lastik servisi, yerinde lastik değişimi ve oto lastik tamiri ağırlıklı olarak Aksaray, Ortaköy ve yakın şehir geçişlerinde sunulur.",
     bullets: [
       "Aksaray merkez ve Ortaköy çıkışlı yönlendirme",
-      "Kırşehir, Kayseri, Nevşehir, Niğde, Konya ve Ankara hatlarına çağrı değerlendirmesi",
-      "Acil durumlarda telefon ve WhatsApp ile lokasyon alma",
+      "Kırşehir, Kayseri, Nevşehir, Konya ve Ankara hatlarında çağrı değerlendirmesi",
+      "Telefon ve WhatsApp ile hızlı lokasyon alma",
     ],
   },
   {
-    title: "Ulusal jant gönderimi",
+    title: "Niğde Otobanı ve yakın hatlar",
     description:
-      "Jant satışı ve sipariş organizasyonu ise saha hizmetinden ayrı yürütülür ve Türkiye'nin 81 iline kargo ile gönderim yapılır.",
+      "Niğde Otobanı'nda full hizmet veriyor; uygun trafik ve rota durumunda otoban üzerindeki acil çağrılara hızlı saha planı oluşturuyoruz.",
     bullets: [
-      "81 il için teklif, model bilgisi ve sipariş akışı",
-      "Binek araç, ticari araç ve SUV jant seçenekleri",
-      "Telefon veya WhatsApp ile hızlı fiyat ve stok teyidi",
+      "Otoban üzerinde hızlı konum teyidi",
+      "Patlak lastik, stepne değişimi ve acil destek",
+      "Gece çağrılarında da aktif iletişim ve yönlendirme",
     ],
   },
-];
-
-export const jantHighlights = [
-  "Türkiye'nin 81 iline jant gönderimi",
-  "Binek araç, ticari araç ve SUV için farklı ölçü seçenekleri",
-  "Telefon ve WhatsApp üzerinden teklif, sipariş ve stok bilgisi",
-  "Güvenli paketleme ve şehir dışı sevkiyat planı",
 ];
 
 export const galleryItems: GalleryItem[] = [
@@ -253,19 +232,19 @@ export const galleryItems: GalleryItem[] = [
     alt: "Ortaköy oto lastik atölyesi ve ekipman alanı",
   },
   {
-    title: "Jant satışı Türkiye geneli",
-    image: "/images/jant-satisi-turkiye.jpg",
-    alt: "Türkiye geneli jant satışı için hazırlanan jant ürün görseli",
+    title: "Yol üstü müdahale hazırlığı",
+    image: "/images/gallery-roadside.jpg",
+    alt: "Yol üstü lastik müdahalesi için hazırlık görseli",
   },
   {
-    title: "81 il jant gönderimi hazırlığı",
-    image: "/images/81-il-jant-gonderimi.jpg",
-    alt: "81 ile jant gönderimi için paketleme hazırlığı görseli",
+    title: "Servis alanı kontrolü",
+    image: "/images/gallery-service-bay.jpg",
+    alt: "Servis alanında lastik kontrolü yapılan çalışma görseli",
   },
   {
     title: "Yerinde lastik değişimi",
     image: "/images/yerinde-lastik-degisimi.jpg",
-    alt: "Yerinde lastik değişimi ve jant kontrolü görseli",
+    alt: "Yerinde lastik değişimi yapılan araç görseli",
   },
 ];
 
@@ -281,7 +260,7 @@ export const homeFaqGroups: FaqGroup[] = [
       {
         question: "Bulunduğum konuma gelir misiniz?",
         answer:
-          "Aksaray ve yakın şehirlerdeki uygun çağrılarda ekibimiz doğrudan konuma yönlendirilir. En hızlı yönlendirme için telefonla arayıp canlı konum paylaşabilirsiniz.",
+          "Aksaray, Ortaköy, Niğde Otobanı ve yakın şehirlerdeki uygun çağrılarda ekibimiz doğrudan konuma yönlendirilir.",
       },
       {
         question: "Kamyon ve ticari araçlara hizmet veriyor musunuz?",
@@ -291,27 +270,27 @@ export const homeFaqGroups: FaqGroup[] = [
       {
         question: "Ortalama ulaşım süreniz nedir?",
         answer:
-          "Süre; bulunduğunuz nokta, trafik ve yol koşullarına göre değişir. Ortaköy ve Aksaray çevresinde hızlı yönlendirme önceliğimizdir.",
+          "Süre; bulunduğunuz nokta, trafik ve yol koşullarına göre değişir. Ortaköy, Aksaray ve Niğde Otobanı hattında hızlı yönlendirme önceliğimizdir.",
       },
     ],
   },
   {
-    title: "Jant satışı ve sipariş",
+    title: "Hizmet alanı",
     items: [
       {
-        question: "Türkiye geneline jant gönderimi yapıyor musunuz?",
+        question: "Niğde Otobanı'nda hizmet veriyor musunuz?",
         answer:
-          "Evet. Jant siparişlerinde Türkiye'nin 81 iline teklif, sipariş ve gönderim organizasyonu sağlıyoruz.",
+          "Evet. Niğde Otobanı'nda full hizmet veriyor ve uygun çağrılarda en hızlı şekilde saha planı oluşturuyoruz.",
       },
       {
-        question: "Jant siparişi nasıl verilir?",
+        question: "Sadece Aksaray içinde mi çalışıyorsunuz?",
         answer:
-          "Telefon veya WhatsApp üzerinden araç bilgisi, ölçü ve talep edilen model paylaşılır. Uygun seçenekler ve fiyat bilgisi sonrası sipariş akışı başlatılır.",
+          "Hayır. Aksaray ve Ortaköy merkezli olsak da Niğde Otobanı ve yakın şehir hatlarında da çağrı değerlendirmesi yapıyoruz.",
       },
       {
-        question: "Sadece Aksaray'a mı satış yapıyorsunuz?",
+        question: "En hızlı iletişim yöntemi nedir?",
         answer:
-          "Hayır. Yol yardım tarafı yerel olarak Aksaray ve yakın bölgelere odaklıdır; jant satışı ise Türkiye geneline açıktır.",
+          "Acil durumlarda doğrudan telefon araması en hızlı yöntemdir. Ardından WhatsApp üzerinden canlı konum göndererek süreci hızlandırabilirsiniz.",
       },
     ],
   },

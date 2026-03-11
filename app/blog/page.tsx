@@ -10,12 +10,12 @@ import { blogPosts } from "@/data/blog-posts";
 import { buildBreadcrumbSchema, buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Blog | Lastik, Yol Yardım ve Jant Rehberleri",
+  title: "Blog | Lastik ve Yol Yardım Rehberleri",
   description:
-    "Yolda lastik patlarsa ne yapılmalı, jant seçimi nasıl yapılır, kış lastiği ne zaman takılır ve lastik basıncı kaç olmalı gibi pratik rehberleri okuyun.",
+    "Yolda lastik patlarsa ne yapılmalı, kış lastiği ne zaman takılır ve lastik basıncı kaç olmalı gibi pratik rehberleri okuyun.",
   path: "/blog",
   image: "/images/ortakoy-oto-lastik.jpg",
-  keywords: ["lastik blog", "jant rehberi", "yol yardım blog", "lastik basıncı"],
+  keywords: ["lastik blog", "yol yardım blog", "kış lastiği", "lastik basıncı"],
 });
 
 export default function BlogIndexPage() {
@@ -31,22 +31,21 @@ export default function BlogIndexPage() {
       />
       <HeroSection
         eyebrow="SEO Blog"
-        title="Yol yardım, lastik ve jant hakkında okunabilir rehberler"
+        title="Yol yardım ve lastik hakkında okunabilir rehberler"
         description="Bilgi arayan kullanıcıları yalnızca genel içerikle değil; sahadan gelen gerçek ihtiyaçlara göre hazırlanmış, sade ve pratik Türkçe yazılarla karşılıyoruz."
         image="/images/ortakoy-oto-lastik.jpg"
         imageAlt="Şen Oto Lastik blog sayfası için atölye ve lastik hizmet görseli"
         highlights={[
           "Yolda lastik patlayınca yapılacaklar",
-          "Jant seçimi ve fiyat mantığı",
-          "Kış lastiği ve lastik basıncı rehberleri",
-          "Her yazıda iletişim CTA'sı ve ilgili hizmet linkleri",
+          "Kış lastiği zamanı ve kullanım notları",
+          "Lastik basıncı için pratik kontrol rehberleri",
         ]}
         badge="Organik Trafik Katmanı"
       />
 
       <section className="py-14 sm:py-20">
         <Container>
-          <div className="grid gap-4 lg:grid-cols-2">
+          <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
             {blogPosts.map((post) => (
               <article
                 key={post.slug}
@@ -78,7 +77,7 @@ export default function BlogIndexPage() {
 
       <CTASection
         title="Bilgiyi okudunuz, şimdi hizmete hızlıca ulaşın"
-        description="Acil yol yardım ve mobil lastik ihtiyaçlarında doğrudan arayın. Jant siparişi ve model bilgisi için WhatsApp hattımız aynı anda aktif."
+        description="Acil yol yardım ve mobil lastik ihtiyaçlarında doğrudan arayın. Konum paylaşımı gerekiyorsa WhatsApp hattımız da aynı anda aktif."
       />
       <ContactSection />
     </>

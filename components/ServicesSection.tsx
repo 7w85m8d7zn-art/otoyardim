@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Disc3, LifeBuoy, Package, RefreshCcw, Truck, Wrench } from "lucide-react";
+import { LifeBuoy, RefreshCcw, Truck, Wrench } from "lucide-react";
 
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -10,8 +10,6 @@ const iconMap = {
   truck: Truck,
   wrench: Wrench,
   refresh: RefreshCcw,
-  disc: Disc3,
-  package: Package,
 };
 
 export function ServicesSection() {
@@ -20,8 +18,8 @@ export function ServicesSection() {
       <Container>
         <SectionHeading
           eyebrow="Ana Hizmetler"
-          title="Yolda kalana anlık, jant alacak olana net teklif"
-          description="Şen Oto Lastik hem yerel acil servis hem de Türkiye geneli jant siparişi tarafında hızlı karar aldıran, doğrudan dönüşüme oynayan bir yapı sunar."
+          title="Yolda kalana anlık, sahada net çözüm"
+          description="Şen Oto Lastik tamamen yol yardım ve lastik hizmetlerine odaklanır. Sayfaları da bu yüzden kısa sürede arama ve WhatsApp dönüşümüne götürecek şekilde kurguladık."
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {serviceCards.map((service) => {
@@ -58,4 +56,3 @@ export function ServicesSection() {
     </section>
   );
 }
-

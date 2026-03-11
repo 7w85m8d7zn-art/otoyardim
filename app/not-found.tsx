@@ -14,7 +14,7 @@ export default function NotFoundPage() {
             Aradığınız sayfa bulunamadı
           </h1>
           <p className="mt-5 text-base leading-7 text-slate-300">
-            Yine de yol yardım, mobil lastik servisi veya jant siparişi için ana sayfaya dönüp
+            Yine de yol yardım, mobil lastik servisi veya lastik tamiri için ana sayfaya dönüp
             hızlıca bize ulaşabilirsiniz.
           </p>
           <Link

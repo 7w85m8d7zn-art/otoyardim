@@ -96,7 +96,7 @@ export const buildLocalBusinessSchema = () => ({
     },
     {
       "@type": "AdministrativeArea",
-      name: "Aksaray ve yakın şehirler",
+      name: "Aksaray, Niğde Otobanı ve yakın şehirler",
     },
     {
       "@type": "Country",
@@ -144,7 +144,6 @@ export const buildLocalBusinessSchema = () => ({
         "@type": "Offer",
         itemOffered: { "@type": "Service", name: "Yerinde lastik değişimi" },
       },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Jant satışı" } },
     ],
   },
 });
@@ -154,58 +153,15 @@ export const buildAutoRepairSchema = (page: LandingPage) => ({
   "@type": "AutoRepair",
   name: `${siteConfig.name} - ${page.title}`,
   description: page.metaDescription,
-  url: absoluteUrl(`/${page.slug}`),
-  areaServed: page.type === "product" ? "Türkiye" : "Aksaray ve yakın şehirler",
-  serviceType:
-    page.type === "product"
-      ? "Jant satışı ve gönderimi"
-      : "Yol yardım, mobil lastik servisi, lastik tamiri ve lastik değişimi",
+  url: absoluteUrl(`/${page.slug || ""}`),
+  areaServed: "Aksaray, Niğde Otobanı ve yakın şehirler",
+  serviceType: "Yol yardım, mobil lastik servisi, lastik tamiri ve lastik değişimi",
   provider: {
     "@type": "LocalBusiness",
     name: siteConfig.name,
     telephone: siteConfig.phoneHref.replace("tel:", ""),
   },
 });
-
-export const buildProductSchema = (page: LandingPage) => {
-  if (!page.schemaProduct) {
-    return null;
-  }
-
-  return {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: page.schemaProduct.name,
-    description: page.schemaProduct.description,
-    category: page.schemaProduct.category,
-    image: absoluteUrl(page.image),
-    brand: {
-      "@type": "Brand",
-      name: siteConfig.name,
-    },
-    seller: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      url: siteConfig.url,
-      telephone: siteConfig.phoneHref.replace("tel:", ""),
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "Türkiye",
-    },
-    offers: {
-      "@type": "Offer",
-      url: absoluteUrl(`/${page.slug}`),
-      priceCurrency: "TRY",
-      availability: "https://schema.org/InStock",
-      seller: {
-        "@type": "Organization",
-        name: siteConfig.name,
-      },
-      itemCondition: "https://schema.org/NewCondition",
-    },
-  };
-};
 
 export const buildFaqSchema = (faqGroups: FaqGroup[]) => ({
   "@context": "https://schema.org",
@@ -241,23 +197,14 @@ export const buildBlogPostingSchema = (post: BlogPost) => ({
   inLanguage: "tr-TR",
 });
 
-export const buildLandingPageSchemas = (page: LandingPage) => {
-  const schemas: Array<Record<string, unknown>> = [
-    buildBreadcrumbSchema([
-      { name: "Anasayfa", href: "/" },
-      { name: page.title, href: `/${page.slug}` },
-    ]),
-    buildAutoRepairSchema(page),
-    buildFaqSchema(page.faqGroups),
-  ];
-
-  const productSchema = buildProductSchema(page);
-  if (productSchema) {
-    schemas.push(productSchema);
-  }
-
-  return schemas;
-};
+export const buildLandingPageSchemas = (page: LandingPage) => [
+  buildBreadcrumbSchema([
+    { name: "Anasayfa", href: "/" },
+    { name: page.title, href: `/${page.slug}` },
+  ]),
+  buildAutoRepairSchema(page),
+  buildFaqSchema(page.faqGroups),
+];
 
 export const buildBlogSchemas = (post: BlogPost) => [
   buildBreadcrumbSchema([
