@@ -96,7 +96,7 @@ export const buildLocalBusinessSchema = () => ({
     },
     {
       "@type": "AdministrativeArea",
-      name: "Aksaray, Niğde Otobanı ve yakın şehirler",
+      name: "Aksaray, Ankara - Niğde Otobanı ve yakın şehirler",
     },
     {
       "@type": "Country",
@@ -154,7 +154,7 @@ export const buildAutoRepairSchema = (page: LandingPage) => ({
   name: `${siteConfig.name} - ${page.title}`,
   description: page.metaDescription,
   url: absoluteUrl(`/${page.slug || ""}`),
-  areaServed: "Aksaray, Niğde Otobanı ve yakın şehirler",
+  areaServed: "Aksaray, Ankara - Niğde Otobanı ve yakın şehirler",
   serviceType: "Yol yardım, mobil lastik servisi, lastik tamiri ve lastik değişimi",
   provider: {
     "@type": "LocalBusiness",

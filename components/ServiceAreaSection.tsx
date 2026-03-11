@@ -16,8 +16,8 @@ export function ServiceAreaSection({ compact = false }: ServiceAreaSectionProps)
       <Container>
         <SectionHeading
           eyebrow="Hizmet Alanı"
-          title="Aksaray merkezli, Niğde Otobanı dahil aktif saha hizmeti"
-          description="İş modelimizi tek ve net bir hizmet çatısında anlatıyoruz: yerinde lastik desteği, yol yardım ve mobil servis. Böylece hem kullanıcı hem Google tarafında daha temiz bir yapı oluşuyor."
+          title="Aksaray çıkışlı saha, otobanda yoğun destek"
+          description="Mesajımızı iki net hatta ayırıyoruz: birincisi Aksaray ve Ortaköy çıkışlı yerel saha desteği, ikincisi Ankara - Niğde Otobanı üzerindeki yoğun yol yardım çağrıları. Böylece hem kullanıcı hem Google neye ağırlık verdiğimizi daha net görüyor."
         />
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
           {serviceAreaCards.map((card, index) => {

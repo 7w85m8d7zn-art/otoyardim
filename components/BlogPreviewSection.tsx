@@ -16,8 +16,8 @@ export function BlogPreviewSection({ posts }: BlogPreviewSectionProps) {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
             eyebrow="Blog"
-            title="Bilgi arayan kullanıcıyı da içeri alıyoruz"
-            description="Yalnızca satış ve çağrı sayfaları değil; pratik, okunabilir Türkçe içerikler de organik trafik ve güven oluşturur."
+            title="Yol üstünde işe yarayan kısa bilgiler"
+            description="Ana odağımız acil destek olsa da, blog tarafında sürücünün gerçekten işine yarayacak kısa ve pratik içerikler tutuyoruz."
           />
           <Link
             href="/blog"
@@ -52,4 +52,3 @@ export function BlogPreviewSection({ posts }: BlogPreviewSectionProps) {
     </section>
   );
 }
-

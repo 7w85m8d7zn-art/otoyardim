@@ -8,8 +8,8 @@ export function WhyChooseUsSection() {
       <Container>
         <SectionHeading
           eyebrow="Neden Şen Oto Lastik"
-          title="Gecikmeyen iletişim, sahada çözülen sorun"
-          description="Bu site yalnızca güzel görünmek için değil, doğrudan telefon araması ve WhatsApp dönüşümü almak için kurgulandı. İçerik de tasarım da buna göre ilerliyor."
+          title="Acil anda önce ulaşılabilir olmak gerekir"
+          description="Bizim için güçlü görünmekten daha önemli olan şey, arandığınız anda cevap verebilmek ve doğru lokasyona doğru ekipmanı yönlendirebilmektir. Bu yüzden tüm yapı otoban ve yol yardım çağrılarını kolaylaştıracak şekilde ilerliyor."
         />
         <div className="mt-10 grid gap-4 lg:grid-cols-2 xl:grid-cols-5">
           {whyChooseUsItems.map((item) => (
@@ -28,4 +28,3 @@ export function WhyChooseUsSection() {
     </section>
   );
 }
-

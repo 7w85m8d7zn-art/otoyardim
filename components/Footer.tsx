@@ -23,11 +23,12 @@ export function Footer() {
               {siteConfig.heritageLabel}
             </p>
             <h2 className="mt-4 font-display text-4xl uppercase leading-[0.95] text-white">
-              Aksaray'da 7/24 yol yardım ve mobil lastik servisi
+              Aksaray ve Ankara - Niğde Otobanı'nda 7/24 yol yardım
             </h2>
             <p className="mt-4 text-sm leading-7 text-slate-300">
-              Yerel saha hizmetimizi Aksaray, Ortaköy ve Niğde Otobanı hattında sunuyoruz. Site
-              yapısını da tek odak etrafında tuttuk: hızlı çağrı, net lokasyon ve sahada çözüm.
+              Ağırlıklı olarak Aksaray, Ortaköy ve Ankara - Niğde Otobanı hattındaki yol yardım
+              çağrılarına odaklanıyoruz. Mobil lastik, değişim ve tamir hizmetlerini de bu hızlı
+              saha modeli içinde yönetiyoruz.
             </p>
             <div className="mt-6 grid gap-3">
               <Link
@@ -67,7 +68,7 @@ export function Footer() {
             2026 {siteConfig.name}. {siteConfig.foundingYear}'den beri Ortaköy / Aksaray merkezli
             mobil lastik ve yol yardım markası.
           </p>
-          <p>Aksaray, Ortaköy ve Niğde Otobanı hattında aktif saha desteği.</p>
+          <p>Aksaray, Ortaköy ve Ankara - Niğde Otobanı hattında aktif saha desteği.</p>
         </div>
       </Container>
     </footer>

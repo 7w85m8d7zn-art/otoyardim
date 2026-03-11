@@ -28,7 +28,7 @@ export function Header() {
                 {siteConfig.heritageLabel}
               </p>
               <p className="text-[11px] uppercase tracking-[0.28em] text-slate-400">
-                Ortaköy / Aksaray 7/24 Mobil Destek
+                Ortaköy / Aksaray + Ankara - Niğde Otobanı
               </p>
             </div>
           </Link>

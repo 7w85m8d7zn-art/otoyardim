@@ -25,12 +25,14 @@ const bodyFont = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Şen Oto Lastik | Aksaray 7/24 Yol Yardım ve Mobil Lastik Servisi",
+    default: "Şen Oto Lastik | Aksaray ve Ankara - Niğde Otobanı 7/24 Yol Yardım",
     template: "%s | Şen Oto Lastik",
   },
   description: siteConfig.description,
   keywords: [
     "aksaray yol yardım",
+    "ankara niğde otobanı yol yardım",
+    "ankara niğde otobanı lastikçi",
     "ortaköy oto lastik",
     "mobil lastik servisi",
     "lastik tamiri",
@@ -45,7 +47,7 @@ export const metadata: Metadata = {
     shortcut: [{ url: "/sav.ico", type: "image/x-icon" }],
   },
   openGraph: {
-    title: "Şen Oto Lastik | Aksaray 7/24 Yol Yardım ve Mobil Lastik Servisi",
+    title: "Şen Oto Lastik | Aksaray ve Ankara - Niğde Otobanı 7/24 Yol Yardım",
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -62,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Şen Oto Lastik | Aksaray 7/24 Yol Yardım ve Mobil Lastik Servisi",
+    title: "Şen Oto Lastik | Aksaray ve Ankara - Niğde Otobanı 7/24 Yol Yardım",
     description: siteConfig.description,
     images: [siteConfig.defaultOgImage],
   },

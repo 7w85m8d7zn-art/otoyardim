@@ -18,8 +18,8 @@ export function ServicesSection() {
       <Container>
         <SectionHeading
           eyebrow="Ana Hizmetler"
-          title="Yolda kalana anlık, sahada net çözüm"
-          description="Şen Oto Lastik tamamen yol yardım ve lastik hizmetlerine odaklanır. Sayfaları da bu yüzden kısa sürede arama ve WhatsApp dönüşümüne götürecek şekilde kurguladık."
+          title="Yoğun hattımız otoban ve yol yardım"
+          description="Ana yoğunluğumuz Ankara - Niğde Otobanı ve Aksaray hattındaki yol yardım çağrıları. Mobil lastik, değişim ve tamir hizmetlerini de bu ana akış etrafında sade ve hızlı biçimde sunuyoruz."
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {serviceCards.map((service) => {

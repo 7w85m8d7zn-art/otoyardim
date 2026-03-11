@@ -1,14 +1,12 @@
 import { BlogPreviewSection } from "@/components/BlogPreviewSection";
 import { ContactSection } from "@/components/ContactSection";
 import { FAQSection } from "@/components/FAQSection";
-import { GallerySection } from "@/components/GallerySection";
 import { GoogleMapSection } from "@/components/GoogleMapSection";
 import { HeroSection } from "@/components/HeroSection";
 import { SchemaMarkup } from "@/components/SchemaMarkup";
 import { ServiceAreaSection } from "@/components/ServiceAreaSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { TrustBar } from "@/components/TrustBar";
-import { VehicleTypesSection } from "@/components/VehicleTypesSection";
 import { WhyChooseUsSection } from "@/components/WhyChooseUsSection";
 import { blogPosts } from "@/data/blog-posts";
 import { homeFaqGroups } from "@/data/site";
@@ -21,14 +19,16 @@ import {
 } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Aksaray'da 7/24 Yol Yardım ve Mobil Lastik Servisi",
+  title: "Aksaray ve Ankara - Niğde Otobanı'nda 7/24 Yol Yardım",
   description:
-    "Şen Oto Lastik; Ortaköy / Aksaray merkezli 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi, oto lastik tamiri ve Niğde Otobanı'nda full hizmet sunar.",
+    "Şen Oto Lastik; Ortaköy / Aksaray merkezli 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi ve Ankara - Niğde Otobanı'nda full hizmet sunar.",
   path: "/",
   image: "/images/aksaray-yol-yardim.jpg",
   keywords: [
     "aksaray yol yardım",
     "aksaray yol yardım 7/24",
+    "ankara niğde otobanı yol yardım",
+    "ankara niğde otobanı lastikçi",
     "niğde otobanı yol yardım",
     "ortaköy oto lastik",
     "mobil lastik servisi",
@@ -48,7 +48,7 @@ export default function HomePage() {
             type: "local",
             metaTitle: "",
             metaDescription:
-              "Aksaray'da 7/24 yol yardım, mobil lastik servisi, lastik tamiri ve Niğde Otobanı'nda full hizmet.",
+              "Aksaray'da 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi ve Ankara - Niğde Otobanı'nda full hizmet.",
             title: "Anasayfa",
             eyebrow: "",
             badge: "",
@@ -70,28 +70,26 @@ export default function HomePage() {
         ]}
       />
       <HeroSection
-        eyebrow="Aksaray Yerel SEO + Dönüşüm"
-        title="Aksaray'da 7/24 Yol Yardım ve Mobil Lastik Servisi"
-        description="Şen Oto Lastik, Ortaköy / Aksaray merkezli olarak 7/24 hizmet verir. Yolda kaldığınız anda mobil lastik değişimi, yol yardım, yerinde lastik tamiri ve hızlı ulaşım için tek arama yeterlidir. Niğde Otobanı'nda da full hizmet vererek acil çağrılara hızlı dönüş sağlıyoruz."
+        eyebrow="Otoban ve Yol Yardım Odağı"
+        title="Aksaray ve Ankara - Niğde Otobanı'nda 7/24 yol yardım"
+        description="Şen Oto Lastik, Ortaköy / Aksaray çıkışlı saha desteğiyle yolda kaldığınız anda süreci uzatmadan yönlendirme yapar. Ana yoğunluğumuz Ankara - Niğde Otobanı ve Aksaray hattındaki yol yardım çağrılarıdır; mobil lastik, stepne ve yerinde müdahale ihtiyaçlarını da aynı hızla yönetiyoruz."
         image="/images/aksaray-yol-yardim.jpg"
-        imageAlt="Aksaray'da 7/24 yol yardım ve mobil lastik servisi görseli"
+        imageAlt="Aksaray ve Ankara - Niğde Otobanı için yol yardım saha aracı"
         highlights={[
-          "Niğde Otobanı'nda full hizmet ve hızlı saha desteği",
-          "Ortaköy / Aksaray merkezli saha desteği",
-          "7/24 yol yardım ve mobil lastik değişimi",
+          "Ankara - Niğde Otobanı'nda yoğun çağrılara uygun saha desteği",
+          "Ortaköy / Aksaray çıkışlı hızlı lokasyon teyidi",
+          "Yol yardım, stepne değişimi ve mobil lastik müdahalesi",
         ]}
-        badge="Niğde Otobanı Dahil 7/24 Hizmet"
+        badge="Ankara - Niğde Otobanı yoğun destek hattı"
       />
       <TrustBar />
-      <ServicesSection />
-      <VehicleTypesSection />
-      <WhyChooseUsSection />
       <ServiceAreaSection />
-      <GallerySection />
+      <ServicesSection />
+      <WhyChooseUsSection />
       <FAQSection groups={homeFaqGroups} />
-      <BlogPreviewSection posts={blogPosts} />
       <ContactSection />
       <GoogleMapSection />
+      <BlogPreviewSection posts={blogPosts} />
     </>
   );
 }
