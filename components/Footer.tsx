@@ -15,19 +15,19 @@ export function Footer() {
       <Container className="py-12 sm:py-16">
         <div className="grid gap-8 xl:grid-cols-[1.15fr_0.85fr_0.85fr]">
           <div className="surface-panel p-6">
-            <p className="section-kicker">
-              Şen Oto Lastik
+            <p className="max-w-md font-display text-lg leading-tight text-white sm:text-[1.25rem]">
+              {siteConfig.name}
             </p>
             <p className="info-pill-amber mt-3 px-4">
               {siteConfig.heritageLabel}
             </p>
             <h2 className="mt-4 font-display text-[2.2rem] leading-[0.95] text-white sm:text-[2.6rem]">
-              Aksaray ve Niğde hattında 7/24 yol yardım
+              Aksaray ve Ankara - Niğde Otobanında 7/24 yol yardım
             </h2>
             <p className="section-copy mt-4">
-              Ağırlıklı olarak Aksaray, Ortaköy ve Niğde hattındaki yol yardım çağrılarına
-              odaklanıyoruz. Mobil lastik, değişim ve tamir hizmetlerini de aynı saha modeli içinde
-              yönetiyoruz.
+              Ağırlıklı olarak Aksaray, Ortaköy ve Ankara - Niğde Otobanı üzerindeki yol yardım
+              çağrılarına odaklanıyoruz. Mobil lastik, değişim ve tamir hizmetlerini de aynı saha
+              modeli içinde yönetiyoruz.
             </p>
             <div className="mt-6 grid gap-3">
               <Link

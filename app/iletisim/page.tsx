@@ -9,16 +9,17 @@ import {
 } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "İletişim | Şen Oto Lastik",
+  title: "İletişim | Şen Oto Lastik - Niğde Otoban 7/24 Lastikçi",
   description:
-    "Şen Oto Lastik iletişim bilgileri, telefon numarası, WhatsApp hattı, adres ve Google Maps konum bilgisi.",
+    "Şen Oto Lastik iletişim bilgileri, Ankara - Niğde Otobanı yol yardımı için telefon numarası, WhatsApp hattı, adres ve Google Maps konum bilgisini içerir.",
   path: "/iletisim",
   image: "/images/ortakoy-oto-lastik.jpg",
   keywords: [
     "şen oto lastik iletişim",
     "ortaköy lastikçi telefon",
     "aksaray yol yardım iletişim",
-    "niğde hattı yol yardım telefon",
+    "ankara niğde otobanı yol yardımı",
+    "ankara niğde otobanı yol yardım telefon",
   ],
 });
 
@@ -43,8 +44,9 @@ export default function ContactPage() {
               Şen Oto Lastik ile hızlı iletişim kurun
             </h1>
             <p className="section-copy-strong mt-5 max-w-3xl">
-              Niğde hattı öncelikli yol yardım çağrıları, mobil lastik servisi ve lastik tamiri
-              için telefon, WhatsApp ve adres bilgilerini bu sayfada tek yerde topladık.
+              Ankara - Niğde Otobanı öncelikli yol yardım çağrıları, mobil lastik servisi ve
+              lastik tamiri için telefon, WhatsApp ve adres bilgilerini bu sayfada tek yerde
+              topladık.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2">
@@ -52,7 +54,7 @@ export default function ContactPage() {
               <span className="info-pill-amber">
                 Ortaköy / Aksaray merkez
               </span>
-              <span className="info-pill">Niğde hattı öncelikli</span>
+              <span className="info-pill">Ankara - Niğde Otobanı öncelikli</span>
             </div>
           </div>
         </Container>

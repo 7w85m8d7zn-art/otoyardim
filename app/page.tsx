@@ -15,16 +15,17 @@ import {
 } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Şen Oto Lastik | Aksaray ve Niğde Hattında Hızlı Lastik Desteği",
+  title: "Ankara - Niğde Otobanında Hızlı Lastik Desteği | Şen Oto Lastik - Niğde Otoban 7/24 Lastikçi",
   description:
-    "Şen Oto Lastik; Ortaköy / Aksaray merkezli yol yardım, mobil lastik servisi, lastik tamiri ve Niğde hattında öncelikli saha desteğini tek merkezden yönetir.",
+    "Şen Oto Lastik; Ortaköy / Aksaray merkezli yol yardım, mobil lastik servisi, lastik tamiri ve Ankara - Niğde Otobanı üzerinde öncelikli saha desteğini tek merkezden yönetir.",
   path: "/",
   image: "/images/aksaray-yol-yardim.jpg",
   keywords: [
     "aksaray yol yardım",
     "aksaray yol yardım 7/24",
     "niğde yol yardım",
-    "niğde hattı yol yardım",
+    "ankara niğde otobanı yol yardım",
+    "ankara niğde otobanı yol yardımı",
     "niğde otobanı yol yardım",
     "ortaköy oto lastik",
     "mobil lastik servisi",
@@ -44,7 +45,7 @@ export default function HomePage() {
             type: "local",
             metaTitle: "",
             metaDescription:
-              "Aksaray'da 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi ve Niğde hattında öncelikli destek.",
+              "Aksaray'da 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi ve Ankara - Niğde Otobanı üzerinde öncelikli destek.",
             title: "Anasayfa",
             eyebrow: "",
             badge: "",
@@ -66,13 +67,13 @@ export default function HomePage() {
         ]}
       />
       <HeroSection
-        eyebrow="Şen Oto Lastik / Niğde Hattı Önceliği"
-        title="Aksaray ve Niğde hattında doğru lastik desteğine hızlı geçin"
-        description="Şen Oto Lastik, Ortaköy / Aksaray çıkışlı yapısıyla yol yardım, mobil servis, lastik tamiri ve yerinde değişim hizmetlerini tek merkezden yönlendirir. Özellikle Niğde hattındaki acil çağrılarda önce doğru hizmeti, sonra en hızlı saha akışını kurarız."
+        eyebrow="Şen Oto Lastik / Ankara - Niğde Otobanı Önceliği"
+        title="Ankara - Niğde Otobanında doğru lastik desteğine hızlı geçin"
+        description="Şen Oto Lastik, Ortaköy / Aksaray çıkışlı yapısıyla yol yardım, mobil servis, lastik tamiri ve yerinde değişim hizmetlerini tek merkezden yönlendirir. Özellikle Ankara - Niğde Otobanı üzerindeki acil çağrılarda önce doğru hizmeti, sonra en hızlı saha akışını kurarız."
         image="/images/aksaray-yol-yardim.jpg"
-        imageAlt="Aksaray ve Niğde hattı için yol yardım saha aracı"
+        imageAlt="Ankara - Niğde Otobanı için yol yardım saha aracı"
         highlights={[
-          "Niğde hattında öncelikli yol yardım ve saha planı",
+          "Ankara - Niğde Otobanı üzerinde öncelikli yol yardım ve saha planı",
           "Mobil lastik servisi, tamir ve değişim için net hizmet geçişi",
           "Ortaköy / Aksaray çıkışlı hızlı lokasyon teyidi ve 7/24 iletişim",
         ]}
@@ -83,7 +84,7 @@ export default function HomePage() {
       <ServiceAreaSection />
       <FAQSection groups={homeFaqGroups} />
       <CTASection
-        title="Niğde hattı ve Aksaray çevresi için hızlı destek alın"
+        title="Ankara - Niğde Otobanı ve Aksaray çevresi için hızlı destek alın"
         description="Acil yol yardım, mobil lastik servisi ya da lastik tamiri için önce arayın. Gerekirse WhatsApp üzerinden konum alıp sizi doğru müdahaleye yönlendirelim."
         callout="İletişim detayları ve harita bilgisi için ayrı iletişim sayfamızı da kullanabilirsiniz."
       />

@@ -21,15 +21,15 @@ export function Header() {
               <span className="font-display text-3xl uppercase leading-none text-white">Ş</span>
             </div>
             <div className="min-w-0">
-              <p className="truncate font-display text-[1.45rem] leading-none tracking-[0.04em] text-white sm:text-[1.6rem]">
-                Şen Oto Lastik
+              <p className="max-w-[15rem] text-pretty font-display text-[1.02rem] leading-[1.02] tracking-[0.04em] text-white sm:max-w-[22rem] sm:text-[1.15rem]">
+                {siteConfig.name}
               </p>
               <div className="mt-2 hidden flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 sm:flex">
                 <span className="rounded-full border border-amber-300/20 bg-amber-300/10 px-2.5 py-1 text-amber-200">
                   {siteConfig.heritageLabel}
                 </span>
                 <span>Ortaköy / Aksaray</span>
-                <span className="text-amber-300/80">Niğde Hattı</span>
+                <span className="text-amber-300/80">Ankara - Niğde Otobanı</span>
               </div>
               <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-slate-400 sm:hidden">
                 Ortaköy / Aksaray

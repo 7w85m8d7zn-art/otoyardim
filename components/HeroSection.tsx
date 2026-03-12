@@ -174,7 +174,7 @@ export function HeroSection({
                 <div className="absolute left-5 top-5 flex flex-wrap gap-2">
                   <div className="overlay-chip">
                     <Route className="h-4 w-4 text-amber-300" />
-                    Niğde Hattı
+                    Ankara - Niğde Otobanı
                   </div>
                   <div className="overlay-chip">
                     <MapPin className="h-4 w-4 text-amber-300" />
@@ -200,9 +200,9 @@ export function HeroSection({
                   Öncelikli hizmet bölgeleri
                 </p>
                 <p className="section-copy mt-4 max-w-2xl">
-                  Ana yoğunluğumuz Aksaray merkezi, Ortaköy çevresi ve Niğde yönlü hatta kurulu.
-                  Uygun çağrılarda çevre bağlantı yollarını da aynı saha planı içinde
-                  değerlendiriyoruz.
+                  Ana yoğunluğumuz Aksaray merkezi, Ortaköy çevresi ve Ankara - Niğde Otobanı
+                  üzerinde kurulu. Uygun çağrılarda otoban bağlantı yollarını da aynı saha planı
+                  içinde değerlendiriyoruz.
                 </p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {highlightedAreas.map((area) => (

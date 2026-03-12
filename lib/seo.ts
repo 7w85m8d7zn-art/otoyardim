@@ -96,7 +96,7 @@ export const buildLocalBusinessSchema = () => ({
     },
     {
       "@type": "AdministrativeArea",
-      name: "Aksaray, Niğde hattı ve yakın şehirler",
+      name: "Aksaray, Ankara - Niğde Otobanı ve yakın şehirler",
     },
     {
       "@type": "Country",
@@ -132,7 +132,7 @@ export const buildLocalBusinessSchema = () => ({
   sameAs: [whatsappHref],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Şen Oto Lastik Hizmet Kataloğu",
+    name: `${siteConfig.name} Hizmet Kataloğu`,
     itemListElement: [
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Yol yardım" } },
       {
@@ -154,7 +154,7 @@ export const buildAutoRepairSchema = (page: LandingPage) => ({
   name: `${siteConfig.name} - ${page.title}`,
   description: page.metaDescription,
   url: absoluteUrl(`/${page.slug || ""}`),
-  areaServed: "Aksaray, Niğde hattı ve yakın şehirler",
+  areaServed: "Aksaray, Ankara - Niğde Otobanı ve yakın şehirler",
   serviceType: "Yol yardım, mobil lastik servisi, lastik tamiri ve lastik değişimi",
   provider: {
     "@type": "LocalBusiness",

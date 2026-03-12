@@ -65,8 +65,8 @@ function RoadsideServiceHeader({ page }: InternalPageHeaderProps) {
               />
               <StatCard
                 icon={<Route className="h-5 w-5 text-amber-300" />}
-                label="Niğde hattı"
-                text="Öncelikli yoğunluk ve hızlı rota değerlendirmesi."
+                label="Otoban önceliği"
+                text="Ankara - Niğde Otobanı üzerinde hızlı rota değerlendirmesi."
               />
               <StatCard
                 icon={<Truck className="h-5 w-5 text-amber-300" />}
@@ -110,7 +110,7 @@ function RoadsideServiceHeader({ page }: InternalPageHeaderProps) {
                 <ProcessItem
                   number="02"
                   title="Rota belirlenir"
-                  text="Niğde hattı ve Aksaray tarafındaki yoğunluk durumuna göre saha planı çıkarılır."
+                  text="Ankara - Niğde Otobanı ve Aksaray tarafındaki yoğunluk durumuna göre saha planı çıkarılır."
                 />
                 <ProcessItem
                   number="03"
@@ -524,8 +524,8 @@ function LocalPageHeader({ page }: InternalPageHeaderProps) {
                 />
                 <MiniInfoCard
                   icon={<Route className="h-4 w-4 text-amber-300" />}
-                  title="Niğde hattı önceliği"
-                  text="Ana yoğunluk Niğde hattında olduğu için rota ve uygunluk değerlendirmesini bu öncelikle yapıyoruz."
+                  title="Otoban önceliği"
+                  text="Ana yoğunluğumuz Ankara - Niğde Otobanı üzerinde olduğu için rota ve uygunluk değerlendirmesini bu öncelikle yapıyoruz."
                 />
               </div>
 
@@ -616,7 +616,7 @@ function ImageStage({ image, imageAlt, overlayLabel, overlayText }: ImageStagePr
       <div className="absolute left-5 top-5 flex flex-wrap gap-2">
         <span className="overlay-chip">
           <Route className="h-4 w-4 text-amber-300" />
-          Niğde Hattı
+          Ankara - Niğde Otobanı
         </span>
         <span className="overlay-chip">
           <MapPin className="h-4 w-4 text-amber-300" />

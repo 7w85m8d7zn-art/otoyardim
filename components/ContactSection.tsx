@@ -15,7 +15,7 @@ export function ContactSection() {
             <SectionHeading
               eyebrow="İletişim"
               title="Acil destek için tek noktadan ulaşın"
-              description="Telefon, WhatsApp, adres ve çalışma saatlerini daha açık bir düzenle topladık. Özellikle Niğde hattı ve Aksaray çevresi çağrılarında önce arama yapmak en hızlı başlangıçtır."
+              description="Telefon, WhatsApp, adres ve çalışma saatlerini daha açık bir düzenle topladık. Özellikle Ankara - Niğde Otobanı ve Aksaray çevresi çağrılarında önce arama yapmak en hızlı başlangıçtır."
             />
 
             <div className="mt-7 flex flex-wrap gap-3">
