@@ -38,7 +38,7 @@ export const navLinks: LinkItem[] = [
   { label: "Yol Yardım", href: "/yol-yardim" },
   { label: "Mobil Servis", href: "/mobil-lastik-servisi" },
   { label: "Lastik Tamiri", href: "/lastik-tamiri" },
-  { label: "İletişim", href: "/#iletisim" },
+  { label: "İletişim", href: "/iletisim" },
 ];
 
 export const footerServiceLinks: LinkItem[] = [

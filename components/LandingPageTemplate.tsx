@@ -1,129 +1,245 @@
 import { CTASection } from "@/components/CTASection";
-import { ContactSection } from "@/components/ContactSection";
 import { Container } from "@/components/Container";
 import { FAQSection } from "@/components/FAQSection";
-import { HeroSection } from "@/components/HeroSection";
+import { InternalPageHeader } from "@/components/InternalPageHeader";
 import { RelatedLinks } from "@/components/RelatedLinks";
-import type { LandingPage } from "@/data/types";
+import type { ContentSection, LandingPage } from "@/data/types";
 
 type LandingPageTemplateProps = {
   page: LandingPage;
 };
 
 export function LandingPageTemplate({ page }: LandingPageTemplateProps) {
-  const primarySections = page.sections.slice(0, 2);
-  const extraSections = page.sections.slice(2);
+  return (
+    <>
+      <InternalPageHeader page={page} />
+      {page.type === "service" ? (
+        <ServicePageContent page={page} />
+      ) : (
+        <LocalPageContent page={page} />
+      )}
+    </>
+  );
+}
+
+type PageContentProps = {
+  page: LandingPage;
+};
+
+function ServicePageContent({ page }: PageContentProps) {
+  const [leadSection, supportSection, ...detailSections] = page.sections;
 
   return (
     <>
-      <HeroSection
-        eyebrow={page.eyebrow}
-        title={page.title}
-        description={page.description}
-        image={page.image}
-        imageAlt={page.imageAlt}
-        highlights={page.highlights}
-        badge={page.badge}
-      />
-      <section className="pb-4">
+      <section className="pb-6">
         <Container>
-          <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-5">
+          <div className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+            <article className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-300/90">
-                Sayfa Özeti
+                Hizmet Özeti
               </p>
               <p className="mt-3 text-sm leading-7 text-slate-200">{page.intro}</p>
-            </div>
-            <div className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-5">
+
+              {leadSection ? (
+                <div className="mt-6 rounded-[1.4rem] border border-white/10 bg-black/20 p-5">
+                  <h2 className="font-display text-[1.8rem] leading-[1] text-white">
+                    {leadSection.title}
+                  </h2>
+                  <div className="mt-3 space-y-3 text-sm leading-7 text-slate-300">
+                    {leadSection.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                  <BulletList bullets={leadSection.bullets} />
+                </div>
+              ) : null}
+            </article>
+
+            <aside className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-300/90">
-                Hızlı Bilgiler
+                Hızlı Karar Notları
               </p>
-              <div className="mt-3 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-2">
                 {page.quickFacts.map((fact) => (
                   <span
                     key={fact}
-                    className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-100"
+                    className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-100"
                   >
                     {fact}
                   </span>
                 ))}
               </div>
-            </div>
+
+              {supportSection ? (
+                <div className="mt-5 rounded-[1.4rem] border border-white/10 bg-black/20 p-5">
+                  <h2 className="text-lg font-semibold text-white">{supportSection.title}</h2>
+                  <div className="mt-3 space-y-3 text-sm leading-6 text-slate-300">
+                    {supportSection.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                  <BulletList bullets={supportSection.bullets} />
+                </div>
+              ) : null}
+            </aside>
           </div>
         </Container>
       </section>
 
-      <section className="py-12 sm:py-14">
-        <Container>
-          <div className="grid gap-4 lg:grid-cols-2">
-            {primarySections.map((section) => (
-              <article
-                key={section.title}
-                className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-5"
-              >
-                <h2 className="font-display text-2xl leading-[1] text-white">
-                  {section.title}
-                </h2>
-                <div className="mt-3 space-y-3 text-sm leading-7 text-slate-300">
-                  {section.paragraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
-                {section.bullets ? (
-                  <ul className="mt-4 space-y-2.5 text-sm leading-6 text-slate-200">
-                    {section.bullets.map((bullet) => (
-                      <li key={bullet} className="flex gap-3">
-                        <span className="mt-2 h-2 w-2 rounded-full bg-amber-300" />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
-              </article>
-            ))}
-          </div>
+      {detailSections.length > 0 ? (
+        <section className="py-6 sm:py-8">
+          <Container>
+            <div className="grid gap-4 lg:grid-cols-2">
+              {detailSections.map((section) => (
+                <ContentCard key={section.title} section={section} />
+              ))}
+            </div>
+          </Container>
+        </section>
+      ) : null}
 
-          {extraSections.length > 0 ? (
-            <div className="mt-4 rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-5">
+      <FAQSection groups={page.faqGroups} />
+      <RelatedLinks
+        title="İlgili Hizmetler"
+        description="Bu hizmete yakın diğer yol yardım ve lastik destek sayfalarına buradan geçebilirsiniz."
+        links={page.relatedLinks}
+      />
+      <CTASection title={page.ctaTitle} description={page.ctaText} callout={page.callout} />
+    </>
+  );
+}
+
+function LocalPageContent({ page }: PageContentProps) {
+  const [intentSection, serviceSection, processSection, ...extraSections] = page.sections;
+
+  return (
+    <>
+      <section className="pb-6">
+        <Container>
+          <div className="grid gap-4 lg:grid-cols-[0.92fr_1.08fr]">
+            <article className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-300/90">
-                Ek Bilgiler
+                Yerel Arama Özeti
               </p>
-              <div className="mt-4 grid gap-3">
-                {extraSections.map((section) => (
-                  <details
-                    key={section.title}
-                    className="rounded-2xl border border-white/10 bg-black/20 p-4"
+              <p className="mt-3 text-sm leading-7 text-slate-200">{page.intro}</p>
+
+              <div className="mt-6 grid gap-3">
+                {page.highlights.map((highlight) => (
+                  <div
+                    key={highlight}
+                    className="rounded-[1.35rem] border border-white/10 bg-black/20 px-4 py-3 text-sm leading-6 text-slate-100"
                   >
-                    <summary className="cursor-pointer list-none text-sm font-semibold text-white sm:text-base">
-                      {section.title}
-                    </summary>
-                    <div className="mt-3 space-y-3 text-sm leading-6 text-slate-300">
-                      {section.paragraphs.map((paragraph) => (
-                        <p key={paragraph}>{paragraph}</p>
-                      ))}
-                    </div>
-                    {section.bullets ? (
-                      <ul className="mt-4 space-y-2 text-sm leading-6 text-slate-200">
-                        {section.bullets.map((bullet) => (
-                          <li key={bullet} className="flex gap-3">
-                            <span className="mt-2 h-2 w-2 rounded-full bg-amber-300" />
-                            <span>{bullet}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    ) : null}
-                  </details>
+                    {highlight}
+                  </div>
                 ))}
               </div>
+            </article>
+
+            <div className="grid gap-4 md:grid-cols-2">
+              {intentSection ? <ContentCard section={intentSection} /> : null}
+              {serviceSection ? <ContentCard section={serviceSection} /> : null}
             </div>
-          ) : null}
+          </div>
         </Container>
       </section>
 
-      <RelatedLinks links={page.relatedLinks} />
-      <CTASection title={page.ctaTitle} description={page.ctaText} callout={page.callout} />
+      {processSection ? (
+        <section className="py-6 sm:py-8">
+          <Container>
+            <div className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6">
+              <div className="grid gap-5 lg:grid-cols-[1fr_0.9fr] lg:items-start">
+                <ContentBlock section={processSection} />
+                <div className="rounded-[1.5rem] border border-white/10 bg-black/20 p-5">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-300/90">
+                    Yerel Sinyal
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-slate-300">
+                    Bu şehir sayfası tek başına anasayfa gibi davranmıyor; kullanıcıyı doğru hizmet
+                    sayfasına ve doğrudan iletişime yönlendiren ara durak olarak çalışıyor.
+                  </p>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {page.quickFacts.map((fact) => (
+                      <span
+                        key={fact}
+                        className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-200"
+                      >
+                        {fact}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+      ) : null}
+
+      {extraSections.length > 0 ? (
+        <section className="py-6 sm:py-8">
+          <Container>
+            <div className="grid gap-4 lg:grid-cols-2">
+              {extraSections.map((section) => (
+                <ContentCard key={section.title} section={section} />
+              ))}
+            </div>
+          </Container>
+        </section>
+      ) : null}
+
+      <RelatedLinks
+        title="Yakın Sayfalar"
+        description="Bulunduğunuz şehre en yakın hizmet ve bölge sayfalarına buradan geçebilirsiniz."
+        links={page.relatedLinks}
+      />
       <FAQSection groups={page.faqGroups} />
-      <ContactSection />
+      <CTASection title={page.ctaTitle} description={page.ctaText} callout={page.callout} />
     </>
+  );
+}
+
+type ContentCardProps = {
+  section: ContentSection;
+};
+
+function ContentCard({ section }: ContentCardProps) {
+  return (
+    <article className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6">
+      <ContentBlock section={section} />
+    </article>
+  );
+}
+
+function ContentBlock({ section }: ContentCardProps) {
+  return (
+    <>
+      <h2 className="font-display text-[1.8rem] leading-[1] text-white">{section.title}</h2>
+      <div className="mt-3 space-y-3 text-sm leading-7 text-slate-300">
+        {section.paragraphs.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </div>
+      <BulletList bullets={section.bullets} />
+    </>
+  );
+}
+
+type BulletListProps = {
+  bullets?: string[];
+};
+
+function BulletList({ bullets }: BulletListProps) {
+  if (!bullets?.length) {
+    return null;
+  }
+
+  return (
+    <ul className="mt-4 space-y-2.5 text-sm leading-6 text-slate-200">
+      {bullets.map((bullet) => (
+        <li key={bullet} className="flex gap-3">
+          <span className="mt-2 h-2 w-2 rounded-full bg-amber-300" />
+          <span>{bullet}</span>
+        </li>
+      ))}
+    </ul>
   );
 }

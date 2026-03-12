@@ -48,15 +48,24 @@ export function CTASection({ title, description, callout }: CTASectionProps) {
                 WhatsApp'tan Ulaş
               </Link>
             </div>
-            <Link
-              href={mapsDirectionsHref}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-slate-200 transition hover:text-white lg:justify-self-end"
-            >
-              Konum al
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            <div className="flex flex-wrap items-center gap-4 lg:col-span-2 lg:justify-self-end">
+              <Link
+                href="/iletisim"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-slate-200 transition hover:text-white"
+              >
+                İletişim sayfası
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href={mapsDirectionsHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-slate-200 transition hover:text-white"
+              >
+                Konum al
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </Container>

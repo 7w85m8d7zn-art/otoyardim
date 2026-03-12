@@ -6,6 +6,7 @@ const lastModified = "2026-03-11T00:00:00+03:00";
 export async function GET() {
   const urls = [
     { path: "/", priority: "1.0", changefreq: "weekly" },
+    { path: "/iletisim", priority: "0.8", changefreq: "monthly" },
     ...landingPages.map((page) => ({
       path: `/${page.slug}`,
       priority: page.type === "local" ? "0.9" : "0.8",

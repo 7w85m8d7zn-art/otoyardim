@@ -1,4 +1,4 @@
-import { ContactSection } from "@/components/ContactSection";
+import { CTASection } from "@/components/CTASection";
 import { FAQSection } from "@/components/FAQSection";
 import { HeroSection } from "@/components/HeroSection";
 import { SchemaMarkup } from "@/components/SchemaMarkup";
@@ -82,7 +82,11 @@ export default function HomePage() {
       <ServicesSection />
       <ServiceAreaSection />
       <FAQSection groups={homeFaqGroups} />
-      <ContactSection />
+      <CTASection
+        title="Niğde hattı ve Aksaray çevresi için hızlı destek alın"
+        description="Acil yol yardım, mobil lastik servisi ya da lastik tamiri için önce arayın. Gerekirse WhatsApp üzerinden konum alıp sizi doğru müdahaleye yönlendirelim."
+        callout="İletişim detayları ve harita bilgisi için ayrı iletişim sayfamızı da kullanabilirsiniz."
+      />
     </>
   );
 }
