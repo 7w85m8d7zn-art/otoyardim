@@ -3,7 +3,6 @@ import { ArrowUpRight, Clock3, MapPin, MessageCircleMore, PhoneCall } from "luci
 
 import { Container } from "@/components/Container";
 import {
-  footerBlogLinks,
   footerCityLinks,
   footerServiceLinks,
   siteConfig,
@@ -14,7 +13,7 @@ export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-black/70">
       <Container className="py-12 sm:py-16">
-        <div className="grid gap-8 xl:grid-cols-[1.15fr_0.85fr_0.85fr_0.85fr]">
+        <div className="grid gap-8 xl:grid-cols-[1.15fr_0.85fr_0.85fr]">
           <div className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-amber-300/90">
               Şen Oto Lastik
@@ -23,12 +22,12 @@ export function Footer() {
               {siteConfig.heritageLabel}
             </p>
             <h2 className="mt-4 font-display text-4xl uppercase leading-[0.95] text-white">
-              Aksaray ve Ankara - Niğde Otobanı'nda 7/24 yol yardım
+              Aksaray ve Niğde hattında 7/24 yol yardım
             </h2>
             <p className="mt-4 text-sm leading-7 text-slate-300">
-              Ağırlıklı olarak Aksaray, Ortaköy ve Ankara - Niğde Otobanı hattındaki yol yardım
-              çağrılarına odaklanıyoruz. Mobil lastik, değişim ve tamir hizmetlerini de bu hızlı
-              saha modeli içinde yönetiyoruz.
+              Ağırlıklı olarak Aksaray, Ortaköy ve Niğde hattındaki yol yardım çağrılarına
+              odaklanıyoruz. Mobil lastik, değişim ve tamir hizmetlerini de aynı saha modeli içinde
+              yönetiyoruz.
             </p>
             <div className="mt-6 grid gap-3">
               <Link
@@ -60,7 +59,6 @@ export function Footer() {
 
           <FooterColumn title="Hizmetler" links={footerServiceLinks} />
           <FooterColumn title="Şehir Sayfaları" links={footerCityLinks} />
-          <FooterColumn title="Blog" links={footerBlogLinks} />
         </div>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-slate-400 lg:flex-row lg:items-center lg:justify-between">
@@ -68,7 +66,7 @@ export function Footer() {
             2026 {siteConfig.name}. {siteConfig.foundingYear}'den beri Ortaköy / Aksaray merkezli
             mobil lastik ve yol yardım markası.
           </p>
-          <p>Aksaray, Ortaköy ve Ankara - Niğde Otobanı hattında aktif saha desteği.</p>
+          <p>Aksaray, Ortaköy ve Niğde hattında aktif saha desteği.</p>
         </div>
       </Container>
     </footer>

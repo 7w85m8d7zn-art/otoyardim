@@ -7,18 +7,18 @@ export const siteConfig = {
   heritageLabel: "1980'den beri",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://senotolastik.com",
   description:
-    "Şen Oto Lastik, Ortaköy / Aksaray merkezli 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi ve Ankara - Niğde Otobanı hattında acil lastik desteği sunar.",
+    "Şen Oto Lastik, Ortaköy / Aksaray merkezli 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi ve Niğde hattında acil lastik desteği sunar.",
   phoneDisplay: "+90 534 492 70 31",
   phoneHref: "tel:+905344927031",
   whatsappNumber: "905344927031",
   whatsappMessage:
-    "Merhaba, Ankara - Niğde Otobanı veya Aksaray hattı için yol yardım desteği almak istiyorum.",
+    "Merhaba, Niğde hattı veya Aksaray çevresi için yol yardım desteği almak istiyorum.",
   district: "Ortaköy",
   city: "Aksaray",
   address: "ZAFER MAH. KIRŞEHİR CAD. YENİ SANAYİ SİT. NO:1, 68400 Ortaköy/Aksaray",
   hours: "7/24 Açık",
   country: "Türkiye",
-  serviceArea: "Aksaray, Ortaköy, Ankara - Niğde Otobanı ve yakın güzergahlar",
+  serviceArea: "Aksaray, Ortaköy, Niğde hattı ve yakın güzergahlar",
   mapQuery: "ZAFER MAH. KIRSEHIR CAD. YENI SANAYI SIT. NO:1, 68400 Ortakoy/Aksaray",
   mapEmbed:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.4056784849777!2d34.0715226!3d38.75439840000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d5bf66cf098ee1%3A0x78823bd4bfe5872a!2sPT%20LAST%C4%B0K-%C5%9Een%20Oto%20Lastik!5e0!3m2!1str!2str!4v1773280210804!5m2!1str!2str",
@@ -36,14 +36,13 @@ export const mapsDirectionsHref = `https://www.google.com/maps/dir/?api=1&destin
 
 export const navLinks: LinkItem[] = [
   { label: "Yol Yardım", href: "/yol-yardim" },
-  { label: "Otoban Hattı", href: "/ankara-nigde-otobani-yol-yardim" },
   { label: "Mobil Servis", href: "/mobil-lastik-servisi" },
+  { label: "Lastik Tamiri", href: "/lastik-tamiri" },
   { label: "İletişim", href: "/#iletisim" },
 ];
 
 export const footerServiceLinks: LinkItem[] = [
   { label: "7/24 Yol Yardım", href: "/yol-yardim" },
-  { label: "Otoban Yol Yardım", href: "/ankara-nigde-otobani-yol-yardim" },
   { label: "Mobil Lastik Servisi", href: "/mobil-lastik-servisi" },
   { label: "Lastik Tamiri", href: "/lastik-tamiri" },
   { label: "Lastik Değişimi", href: "/lastik-degisimi" },
@@ -60,24 +59,9 @@ export const footerCityLinks: LinkItem[] = [
   { label: "Ankara Yol Yardım", href: "/ankara-yol-yardim" },
 ];
 
-export const footerBlogLinks: LinkItem[] = [
-  {
-    label: "Yolda Lastik Patlarsa Ne Yapılmalı?",
-    href: "/blog/yolda-lastik-patlarsa-ne-yapilmali",
-  },
-  {
-    label: "Kış Lastiği Ne Zaman Takılır?",
-    href: "/blog/kis-lastigi-ne-zaman-takilir",
-  },
-  {
-    label: "Lastik Basıncı Kaç Olmalı?",
-    href: "/blog/lastik-basinc-kac-olmali",
-  },
-];
-
 export const heroStats = [
   { value: "7/24", label: "Canlı Çağrı Hattı" },
-  { value: "Otoban", label: "Ankara - Niğde Yoğun Destek" },
+  { value: "Niğde", label: "Hattında Öncelikli Destek" },
   { value: "Ortaköy", label: "Aksaray Çıkışlı Ekip" },
 ];
 
@@ -93,8 +77,8 @@ export const trustItems: TrustItem[] = [
     icon: "zap",
   },
   {
-    title: "Ankara - Niğde Otobanı",
-    description: "Ankara - Niğde Otobanı ve yakın geçişlerde aktif saha desteği.",
+    title: "Niğde Hattı",
+    description: "Niğde yönlü yol ve otoban bağlantılarında aktif saha desteği.",
     icon: "truck",
   },
   {
@@ -116,14 +100,6 @@ export const serviceCards: ServiceCard[] = [
       "Aksaray, Ortaköy ve bağlantı yollarında yolda kalan araçlara hızlı saha çıkışı.",
     href: "/yol-yardim",
     icon: "lifeBuoy",
-  },
-  {
-    title: "Otoban Yol Yardım",
-    description:
-      "Ankara - Niğde Otobanı üzerindeki yoğun çağrılarda konum bazlı hızlı yönlendirme.",
-    href: "/ankara-nigde-otobani-yol-yardim",
-    icon: "truck",
-    badge: "Yoğun Hat",
   },
   {
     title: "Mobil Lastik Servisi",
@@ -172,7 +148,7 @@ export const whyChooseUsItems = [
   {
     title: "Otoban hattında yoğun destek",
     description:
-      "Ankara - Niğde Otobanı'ndaki çağrıları ayrı bir yoğunluk hattı gibi yönetiyor, uygun rotada hızlı çıkış planlıyoruz.",
+      "Niğde hattındaki çağrıları öncelikli rota gibi değerlendiriyor, uygun durumda hızlı saha çıkışı planlıyoruz.",
   },
   {
     title: "Bulunduğunuz noktada müdahale",
@@ -198,11 +174,11 @@ export const serviceAreaCards = [
     ],
   },
   {
-    title: "Ankara - Niğde Otobanı yoğunluk hattı",
+    title: "Niğde hattı öncelikli destek alanı",
     description:
-      "Otobanda kalan sürücüler için ilk görünür mesajımız da burası: Ankara - Niğde Otobanı'nda full hizmet veriyor, uygun rota ve yoğunluk durumunda acil çağrılara hızlı saha planı oluşturuyoruz.",
+      "Niğde yönlü hatta ve otoban bağlantılarında gelen çağrıları öncelikli değerlendiriyor, uygun rota ve yoğunluk durumunda hızlı saha planı oluşturuyoruz.",
     bullets: [
-      "Otoban üzerinde hızlı konum teyidi ve güvenli iletişim",
+      "Niğde hattında hızlı konum teyidi ve güvenli iletişim",
       "Patlak lastik, stepne değişimi ve acil yol yardımı",
       "Gece çağrılarında da aktif iletişim ve rota planı",
     ],
@@ -254,7 +230,7 @@ export const homeFaqGroups: FaqGroup[] = [
       {
         question: "Bulunduğum konuma gelir misiniz?",
         answer:
-          "Aksaray, Ortaköy, Ankara - Niğde Otobanı ve yakın şehirlerdeki uygun çağrılarda ekibimiz doğrudan konuma yönlendirilir.",
+          "Aksaray, Ortaköy, Niğde hattı ve yakın şehirlerdeki uygun çağrılarda ekibimiz doğrudan konuma yönlendirilir.",
       },
       {
         question: "Kamyon ve ticari araçlara hizmet veriyor musunuz?",
@@ -264,7 +240,7 @@ export const homeFaqGroups: FaqGroup[] = [
       {
         question: "Ortalama ulaşım süreniz nedir?",
         answer:
-          "Süre; bulunduğunuz nokta, trafik ve yol koşullarına göre değişir. Ortaköy, Aksaray ve Ankara - Niğde Otobanı hattında hızlı yönlendirme önceliğimizdir.",
+          "Süre; bulunduğunuz nokta, trafik ve yol koşullarına göre değişir. Ortaköy, Aksaray ve özellikle Niğde hattında hızlı yönlendirme önceliğimizdir.",
       },
     ],
   },
@@ -272,14 +248,14 @@ export const homeFaqGroups: FaqGroup[] = [
     title: "Otoban ve yol yardım hizmeti",
     items: [
       {
-        question: "Ankara - Niğde Otobanı'nda hizmet veriyor musunuz?",
+        question: "Niğde hattında hizmet veriyor musunuz?",
         answer:
-          "Evet. Ankara - Niğde Otobanı'nda full hizmet veriyor ve uygun çağrılarda en hızlı şekilde saha planı oluşturuyoruz.",
+          "Evet. Niğde hattında ve uygun otoban bağlantılarında full hizmet veriyor, acil çağrılarda hızlı saha planı oluşturuyoruz.",
       },
       {
         question: "Sadece Aksaray içinde mi çalışıyorsunuz?",
         answer:
-          "Hayır. Aksaray ve Ortaköy merkezli olsak da Ankara - Niğde Otobanı ve yakın şehir hatlarında da çağrı değerlendirmesi yapıyoruz.",
+          "Hayır. Aksaray ve Ortaköy merkezli olsak da Niğde hattı ve yakın şehir bağlantılarında da çağrı değerlendirmesi yapıyoruz.",
       },
       {
         question: "En hızlı iletişim yöntemi nedir?",

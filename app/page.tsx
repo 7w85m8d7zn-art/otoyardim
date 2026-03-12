@@ -15,16 +15,16 @@ import {
 } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Aksaray ve Ankara - Niğde Otobanı'nda 7/24 Yol Yardım",
+  title: "Aksaray ve Niğde Hattında 7/24 Yol Yardım",
   description:
-    "Şen Oto Lastik; Ortaköy / Aksaray merkezli 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi ve Ankara - Niğde Otobanı'nda full hizmet sunar.",
+    "Şen Oto Lastik; Ortaköy / Aksaray merkezli 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi ve Niğde hattında öncelikli destek sunar.",
   path: "/",
   image: "/images/aksaray-yol-yardim.jpg",
   keywords: [
     "aksaray yol yardım",
     "aksaray yol yardım 7/24",
-    "ankara niğde otobanı yol yardım",
-    "ankara niğde otobanı lastikçi",
+    "niğde yol yardım",
+    "niğde hattı yol yardım",
     "niğde otobanı yol yardım",
     "ortaköy oto lastik",
     "mobil lastik servisi",
@@ -44,7 +44,7 @@ export default function HomePage() {
             type: "local",
             metaTitle: "",
             metaDescription:
-              "Aksaray'da 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi ve Ankara - Niğde Otobanı'nda full hizmet.",
+              "Aksaray'da 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi ve Niğde hattında öncelikli destek.",
             title: "Anasayfa",
             eyebrow: "",
             badge: "",
@@ -66,17 +66,17 @@ export default function HomePage() {
         ]}
       />
       <HeroSection
-        eyebrow="Otoban ve Yol Yardım Odağı"
-        title="Aksaray ve Ankara - Niğde Otobanı'nda 7/24 yol yardım"
-        description="Şen Oto Lastik, Ortaköy / Aksaray çıkışlı ekibiyle özellikle Ankara - Niğde Otobanı ve Aksaray hattındaki yol yardım çağrılarına hızlı dönüş yapar. Yolda kaldığınız anda arama, konum ve yönlendirme sürecini kısa tutarız."
+        eyebrow="Niğde Hattı Öncelikli Destek"
+        title="Aksaray ve Niğde hattında 7/24 yol yardım"
+        description="Şen Oto Lastik, Ortaköy / Aksaray çıkışlı ekibiyle özellikle Niğde hattı ve Aksaray çevresindeki yol yardım çağrılarına hızlı dönüş yapar. Yolda kaldığınız anda arama, konum ve yönlendirme sürecini kısa tutarız."
         image="/images/aksaray-yol-yardim.jpg"
-        imageAlt="Aksaray ve Ankara - Niğde Otobanı için yol yardım saha aracı"
+        imageAlt="Aksaray ve Niğde hattı için yol yardım saha aracı"
         highlights={[
-          "Ankara - Niğde Otobanı'nda yoğun çağrılara uygun saha desteği",
+          "Niğde hattında öncelikli saha desteği",
           "Ortaköy / Aksaray çıkışlı hızlı lokasyon teyidi",
           "Yol yardım, stepne değişimi ve mobil lastik müdahalesi",
         ]}
-        badge="Ankara - Niğde Otobanı yoğun destek hattı"
+        badge="Niğde hattı öncelikli hizmet"
       />
       <TrustBar />
       <ServicesSection />

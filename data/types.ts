@@ -69,34 +69,3 @@ export type LandingPage = {
   callout: string;
   keywords: string[];
 };
-
-export type BlogSubSection = {
-  title: string;
-  paragraphs: string[];
-  bullets?: string[];
-};
-
-export type BlogSection = {
-  title: string;
-  paragraphs: string[];
-  bullets?: string[];
-  subSections?: BlogSubSection[];
-};
-
-export type BlogPost = {
-  slug: string;
-  metaTitle: string;
-  metaDescription: string;
-  title: string;
-  excerpt: string;
-  intro: string;
-  category: string;
-  coverImage: string;
-  coverAlt: string;
-  publishedAt: string;
-  updatedAt: string;
-  readingTime: string;
-  sections: BlogSection[];
-  faq: FaqItem[];
-  relatedLinks: RelatedLink[];
-};

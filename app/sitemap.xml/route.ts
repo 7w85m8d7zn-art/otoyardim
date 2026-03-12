@@ -1,4 +1,3 @@
-import { blogPosts } from "@/data/blog-posts";
 import { landingPages } from "@/data/landing-pages";
 import { siteConfig } from "@/data/site";
 
@@ -7,15 +6,9 @@ const lastModified = "2026-03-11T00:00:00+03:00";
 export async function GET() {
   const urls = [
     { path: "/", priority: "1.0", changefreq: "weekly" },
-    { path: "/blog", priority: "0.8", changefreq: "monthly" },
     ...landingPages.map((page) => ({
       path: `/${page.slug}`,
       priority: page.type === "local" ? "0.9" : "0.8",
-      changefreq: "monthly",
-    })),
-    ...blogPosts.map((post) => ({
-      path: `/blog/${post.slug}`,
-      priority: "0.7",
       changefreq: "monthly",
     })),
   ];

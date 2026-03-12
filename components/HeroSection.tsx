@@ -132,7 +132,7 @@ export function HeroSection({
               <div className="absolute left-5 top-5 flex flex-wrap gap-2">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/55 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-md">
                   <Route className="h-4 w-4 text-amber-300" />
-                  Ankara - Niğde Otobanı
+                  Niğde Hattı
                 </div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/55 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-md">
                   <MapPin className="h-4 w-4 text-amber-300" />
@@ -146,7 +146,7 @@ export function HeroSection({
                     7/24 aktif saha
                   </p>
                   <p className="mt-2 text-sm leading-6 text-slate-100">
-                    Otoban ve Aksaray hattındaki acil yol yardım çağrılarına hızlı yönlendirme.
+                    Niğde hattı ve Aksaray çevresindeki acil yol yardım çağrılarına hızlı yönlendirme.
                   </p>
                 </div>
               </div>

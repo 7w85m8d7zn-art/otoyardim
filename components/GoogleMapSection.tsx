@@ -9,7 +9,7 @@ type GoogleMapSectionProps = {
 
 export function GoogleMapSection({
   title = "Ortaköy / Aksaray çıkış noktamız",
-  description = "Yerel güven sinyalini haritada veriyor, saha yoğunluğunu ise otoban ve yol yardım odağında açık biçimde anlatıyoruz. Böylece kullanıcı fiziksel merkezimizi de hizmet modelimizi de aynı anda görüyor.",
+  description = "Yerel güven sinyalini haritada veriyor, saha yoğunluğunu ise Niğde hattı ve yol yardım odağında açık biçimde anlatıyoruz. Böylece kullanıcı fiziksel merkezimizi de hizmet modelimizi de aynı anda görüyor.",
 }: GoogleMapSectionProps) {
   return (
     <section className="py-14 sm:py-20">
@@ -29,8 +29,8 @@ export function GoogleMapSection({
                 yakın şehir güzergahları
               </p>
               <p className="mt-2">
-                <strong className="text-white">Ek saha hattı:</strong> Ankara - Niğde Otobanı ve
-                uygun geçiş noktaları
+                <strong className="text-white">Ek saha hattı:</strong> Niğde hattı ve uygun
+                bağlantı güzergahları
               </p>
             </div>
           </div>

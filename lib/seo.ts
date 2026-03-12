@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import type { BlogPost, FaqGroup, LandingPage } from "@/data/types";
+import type { FaqGroup, LandingPage } from "@/data/types";
 import { siteConfig, whatsappHref } from "@/data/site";
 
 type MetadataInput = {
@@ -96,7 +96,7 @@ export const buildLocalBusinessSchema = () => ({
     },
     {
       "@type": "AdministrativeArea",
-      name: "Aksaray, Ankara - Niğde Otobanı ve yakın şehirler",
+      name: "Aksaray, Niğde hattı ve yakın şehirler",
     },
     {
       "@type": "Country",
@@ -154,7 +154,7 @@ export const buildAutoRepairSchema = (page: LandingPage) => ({
   name: `${siteConfig.name} - ${page.title}`,
   description: page.metaDescription,
   url: absoluteUrl(`/${page.slug || ""}`),
-  areaServed: "Aksaray, Ankara - Niğde Otobanı ve yakın şehirler",
+  areaServed: "Aksaray, Niğde hattı ve yakın şehirler",
   serviceType: "Yol yardım, mobil lastik servisi, lastik tamiri ve lastik değişimi",
   provider: {
     "@type": "LocalBusiness",
@@ -176,27 +176,6 @@ export const buildFaqSchema = (faqGroups: FaqGroup[]) => ({
   })),
 });
 
-export const buildBlogPostingSchema = (post: BlogPost) => ({
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: post.title,
-  description: post.metaDescription,
-  image: absoluteUrl(post.coverImage),
-  datePublished: post.publishedAt,
-  dateModified: post.updatedAt,
-  mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
-  author: {
-    "@type": "Organization",
-    name: siteConfig.name,
-  },
-  publisher: {
-    "@type": "Organization",
-    name: siteConfig.name,
-  },
-  articleSection: post.category,
-  inLanguage: "tr-TR",
-});
-
 export const buildLandingPageSchemas = (page: LandingPage) => [
   buildBreadcrumbSchema([
     { name: "Anasayfa", href: "/" },
@@ -204,25 +183,4 @@ export const buildLandingPageSchemas = (page: LandingPage) => [
   ]),
   buildAutoRepairSchema(page),
   buildFaqSchema(page.faqGroups),
-];
-
-export const buildBlogSchemas = (post: BlogPost) => [
-  buildBreadcrumbSchema([
-    { name: "Anasayfa", href: "/" },
-    { name: "Blog", href: "/blog" },
-    { name: post.title, href: `/blog/${post.slug}` },
-  ]),
-  buildBlogPostingSchema(post),
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: post.faq.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  },
 ];

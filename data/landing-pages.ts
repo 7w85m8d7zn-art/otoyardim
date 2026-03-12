@@ -41,12 +41,6 @@ const citySupportLinks: RelatedLink[] = [
   },
 ];
 
-const otobanSupportLink: RelatedLink = {
-  label: "Ankara - Niğde Otobanı Yol Yardım",
-  href: "/ankara-nigde-otobani-yol-yardim",
-  description: "Otoban hattına özel yoğun yol yardım sayfamızı inceleyin.",
-};
-
 const buildFaqGroups = (
   place: string,
   arrivalAnswer: string,
@@ -83,10 +77,10 @@ const servicePages: LandingPage[] = [
     type: "service",
     metaTitle: "Aksaray 7/24 Yol Yardım | Şen Oto Lastik",
     metaDescription:
-      "Aksaray, Ortaköy ve Ankara - Niğde Otobanı hattında 7/24 yol yardım, patlak lastik desteği, stepne değişimi ve mobil müdahale için Şen Oto Lastik'e ulaşın.",
+      "Aksaray, Ortaköy ve Niğde hattında 7/24 yol yardım, patlak lastik desteği, stepne değişimi ve mobil müdahale için Şen Oto Lastik'e ulaşın.",
     title: "Aksaray'da 7/24 Yol Yardım",
     eyebrow: "Yerel Hizmet SEO",
-    badge: "Ankara - Niğde Otobanı Dahil Hizmet",
+    badge: "Niğde Hattı Dahil Hizmet",
     description:
       "Yolda kaldığınız anda Aksaray ve yakın hatlarda hızlı yönlendirme, yerinde lastik desteği ve güven veren iletişim sunuyoruz.",
     intro:
@@ -95,7 +89,7 @@ const servicePages: LandingPage[] = [
     imageAlt: "Aksaray yol yardım hizmeti veren saha aracı ve lastik müdahalesi",
     highlights: [
       "7/24 çağrı ve hızlı yönlendirme",
-      "Ankara - Niğde Otobanı dahil yakın hatlarda destek",
+      "Niğde hattı dahil yakın hatlarda destek",
       "Patlak lastik, stepne değişimi ve mobil müdahale",
     ],
     quickFacts: ["7/24 aktif", "Yerinde destek", "Ticari araç uyumlu"],
@@ -113,9 +107,9 @@ const servicePages: LandingPage[] = [
         ],
       },
       {
-        title: "Aksaray ve Ankara - Niğde hattında aktif saha planı",
+        title: "Aksaray ve Niğde hattında aktif saha planı",
         paragraphs: [
-          "Ortaköy merkezli operasyon, Aksaray içi ve bağlantı yollarında daha hızlı rota kurulmasını sağlar. Uygun durumlarda Ankara - Niğde Otobanı tarafındaki çağrılar da aynı hız mantığıyla planlanır.",
+          "Ortaköy merkezli operasyon, Aksaray içi ve bağlantı yollarında daha hızlı rota kurulmasını sağlar. Uygun durumlarda Niğde hattı tarafındaki çağrılar da aynı hız mantığıyla planlanır.",
           "Şehir içi, ilçe çıkışı ya da otoban geçişlerinde gelen çağrılarda yol durumuna göre en doğru servis modeli belirlenir: tamir, değişim ya da mobil lastik servisi.",
         ],
       },
@@ -131,7 +125,7 @@ const servicePages: LandingPage[] = [
       "Uygun rotada kalan çağrılarda ekibimiz doğrudan konuma yönlendirilir. Konumunuzu telefonla tarif etmeniz veya WhatsApp üzerinden canlı konum göndermeniz yeterlidir.",
       "Patlak lastik tamiri, stepne değişimi, sökme-takma ve mobil lastik desteği sahada yapılabilir. Duruma göre en güvenli çözüm yöntemi belirlenir.",
     ),
-    relatedLinks: [otobanSupportLink, ...baseServiceLinks.slice(1), ...citySupportLinks],
+    relatedLinks: [...baseServiceLinks.slice(1), ...citySupportLinks],
     ctaTitle: "Aksaray'da yol yardım mı gerekiyor?",
     ctaText:
       "Yolda kaldıysanız zaman kaybetmeyin. Telefonla konumunuzu paylaşın, Şen Oto Lastik en uygun müdahale planını hemen oluştursun.",
@@ -140,72 +134,7 @@ const servicePages: LandingPage[] = [
       "aksaray yol yardım",
       "aksaray yol yardım 7/24",
       "ortaköy yol yardım",
-      "ankara niğde otobanı yol yardım",
-      "niğde otobanı yol yardım",
-    ],
-  },
-  {
-    slug: "ankara-nigde-otobani-yol-yardim",
-    type: "service",
-    metaTitle: "Ankara - Niğde Otobanı Yol Yardım | 7/24 Şen Oto Lastik",
-    metaDescription:
-      "Ankara - Niğde Otobanı'nda yol yardım, mobil lastik servisi, stepne değişimi ve patlak lastik desteği için Şen Oto Lastik ile 7/24 iletişime geçin.",
-    title: "Ankara - Niğde Otobanı'nda 7/24 Yol Yardım",
-    eyebrow: "Otoban Hattı",
-    badge: "Yoğun Destek Hattı",
-    description:
-      "Otoban üzerinde yolda kalan sürücüler için hızlı iletişim, net konum teyidi ve uygun saha planı sunuyoruz.",
-    intro:
-      "Ankara - Niğde Otobanı'nda yaşanan lastik sorunu ya da yol yardım ihtiyacında en kritik konu hızlı iletişimdir. Şen Oto Lastik, Ortaköy / Aksaray çıkışlı saha mantığıyla bu hatta gelen çağrıları ayrı bir yoğunluk içinde değerlendirir; patlak lastik, stepne değişimi ve mobil müdahale ihtiyacını net bilgiyle yönetir.",
-    image: "/images/aksaray-yol-yardim.jpg",
-    imageAlt: "Ankara - Niğde Otobanı yol yardım saha desteği görseli",
-    highlights: [
-      "Ankara - Niğde Otobanı üzerinde yoğun yol yardım odağı",
-      "Telefon + canlı konum ile hızlı lokasyon teyidi",
-      "Stepne, tamir ve mobil lastik müdahalesi",
-    ],
-    quickFacts: ["7/24 canlı hat", "Otoban odaklı", "Yerinde müdahale"],
-    sections: [
-      {
-        title: "Otobanda ilk ihtiyaç hız değil netliktir",
-        paragraphs: [
-          "Emniyet şeridinde ya da bağlantı noktasında kalan sürücü için ilk adım panik değil, doğru yönlendirme olmalıdır. Bu yüzden çağrının ilk anında araç tipi, konum, lastik sorunu ve güvenli bekleme noktası netleştirilir.",
-          "Şen Oto Lastik, otoban çağrılarında gereksiz söz kalabalığı yerine pratik bilgi akışı ile ilerler. Kullanıcı nerede olduğunu ve sorunun ne olduğunu net verdiğinde saha planı çok daha hızlı kurulur.",
-        ],
-        bullets: [
-          "Canlı konum ile hızlı teyit",
-          "Patlak lastik ve stepne desteği",
-          "Uygun hatta mobil lastik müdahalesi",
-        ],
-      },
-      {
-        title: "Ankara - Niğde Otobanı'nda hangi destekler öne çıkar",
-        paragraphs: [
-          "Bu hatta en sık gelen talepler yol yardım, yerinde lastik değişimi, stepne uygulaması ve patlak lastik değerlendirmesidir. Hasarın durumuna göre tamir, değişim ya da farklı yönlendirme açık şekilde paylaşılır.",
-          "Gece sürüşü ve şehirler arası kullanım arttıkça otoban çağrılarında hızlı cevap vermek daha da kritik hale gelir. Bu sayfanın kurgusu da tam olarak bu niyet etrafında hazırlandı.",
-        ],
-      },
-      {
-        title: "Aksaray çıkışlı saha mantığı neden avantaj sağlar",
-        paragraphs: [
-          "Ortaköy / Aksaray merkezli yapı, otoban hattındaki uygun noktalara daha gerçekçi ve hızlı bir rota planı kurulmasını sağlar. Müsaitlik, trafik ve konum netleştiğinde ekip yönlendirmesi gecikmeden paylaşılır.",
-        ],
-      },
-    ],
-    faqGroups: buildFaqGroups(
-      "Ankara - Niğde Otobanı",
-      "Evet. Uygun rota ve anlık yoğunluk durumunda otoban üzerindeki konumunuza doğrudan yönlendirme yapıyoruz. Telefon veya WhatsApp üzerinden canlı konum paylaşmanız süreci hızlandırır.",
-      "Stepne değişimi, patlak lastik değerlendirmesi, mobil lastik müdahalesi ve uygun durumlarda yerinde tamir bu hatta planlanabilir.",
-    ),
-    relatedLinks: [...baseServiceLinks, citySupportLinks[0], citySupportLinks[2]],
-    ctaTitle: "Otobanda kaldıysanız tek arama yeterli",
-    ctaText:
-      "Ankara - Niğde Otobanı üzerinde destek gerekiyorsa hemen arayın. Konum, araç tipi ve lastik sorununu alıp en doğru yönlendirmeyi gecikmeden paylaşalım.",
-    callout: "Bu sayfa doğrudan Ankara - Niğde Otobanı yol yardım aramalarına cevap vermek için hazırlandı.",
-    keywords: [
-      "ankara niğde otobanı yol yardım",
-      "ankara niğde otobanı lastikçi",
-      "ankara niğde otobanı mobil lastik servisi",
+      "niğde hattı yol yardım",
       "niğde otobanı yol yardım",
     ],
   },
@@ -214,19 +143,19 @@ const servicePages: LandingPage[] = [
     type: "service",
     metaTitle: "Aksaray Mobil Lastik Servisi | Yerinde Lastik Desteği",
     metaDescription:
-      "Aksaray, Ortaköy ve Ankara - Niğde Otobanı hattında mobil lastik servisi, yerinde sökme-takma, lastik değişimi ve acil yol yardımı için 7/24 ulaşın.",
+      "Aksaray, Ortaköy ve Niğde hattında mobil lastik servisi, yerinde sökme-takma, lastik değişimi ve acil yol yardımı için 7/24 ulaşın.",
     title: "Aksaray Mobil Lastik Servisi",
     eyebrow: "Mobil Müdahale",
     badge: "Konuma Gelen Servis",
     description:
       "Servise gitmek zorunda kalmadan, bulunduğunuz noktada profesyonel lastik müdahalesi alın.",
     intro:
-      "Mobil lastik servisi, özellikle yolda kalındığında ya da aracı hareket ettirmek riskli olduğunda en pratik çözümdür. Şen Oto Lastik; Ortaköy, Aksaray ve Ankara - Niğde Otobanı hattında konuma gelerek lastik tamiri, değişimi ve acil müdahale desteği sağlar.",
+      "Mobil lastik servisi, özellikle yolda kalındığında ya da aracı hareket ettirmek riskli olduğunda en pratik çözümdür. Şen Oto Lastik; Ortaköy, Aksaray ve Niğde hattında konuma gelerek lastik tamiri, değişimi ve acil müdahale desteği sağlar.",
     image: "/images/mobil-lastik-servisi.jpg",
     imageAlt: "Mobil lastik servisi ekibinin yerinde lastik değişimi yapması",
     highlights: [
       "Konuma gelen saha desteği",
-      "Ankara - Niğde Otobanı'nda da hızlı değerlendirme",
+      "Niğde hattında da hızlı değerlendirme",
       "Patlak, hava kaçağı ve sökme-takma işlemleri",
     ],
     quickFacts: ["Konuma servis", "7/24 destek", "Hızlı saha planı"],
@@ -251,7 +180,7 @@ const servicePages: LandingPage[] = [
         ],
       },
       {
-        title: "Aksaray ve Ankara - Niğde otoban hattında pratik iletişim",
+        title: "Aksaray ve Niğde hattında pratik iletişim",
         paragraphs: [
           "Telefonla ilk yönlendirme alındıktan sonra canlı konum gönderildiğinde ekibin rota planı çok daha net hale gelir. Böylece kullanıcı kısa sürede hangi müdahalenin yapılacağını bilir ve bekleme stresi azalır.",
         ],
@@ -259,11 +188,10 @@ const servicePages: LandingPage[] = [
     ],
     faqGroups: buildFaqGroups(
       "Mobil lastik servisi çağrıları",
-      "Uygun mesafedeki çağrılarda evet. Aksaray, Ortaköy ve Ankara - Niğde Otobanı hattında telefon ile konum doğrulaması sonrası doğrudan bulunduğunuz noktaya gelinir.",
+      "Uygun mesafedeki çağrılarda evet. Aksaray, Ortaköy ve Niğde hattında telefon ile konum doğrulaması sonrası doğrudan bulunduğunuz noktaya gelinir.",
       "Yerinde lastik değişimi, stepne uygulaması, patlak lastik müdahalesi ve sökme-takma işlemleri mobil servis kapsamında planlanır.",
     ),
     relatedLinks: [
-      otobanSupportLink,
       baseServiceLinks[0],
       baseServiceLinks[2],
       baseServiceLinks[3],
@@ -286,14 +214,14 @@ const servicePages: LandingPage[] = [
     type: "service",
     metaTitle: "Aksaray Lastik Tamiri | Yerinde Oto Lastik Tamiri",
     metaDescription:
-      "Aksaray, Ortaköy ve Ankara - Niğde Otobanı hattında oto lastik tamiri, patlak lastik onarımı ve hava kaçağı için Şen Oto Lastik'e 7/24 ulaşın.",
+      "Aksaray, Ortaköy ve Niğde hattında oto lastik tamiri, patlak lastik onarımı ve hava kaçağı için Şen Oto Lastik'e 7/24 ulaşın.",
     title: "Aksaray Oto Lastik Tamiri",
     eyebrow: "Tamir Hizmeti",
     badge: "Patlak Lastiğe Hızlı Çözüm",
     description:
       "Çivi, kesik, hava kaçağı ve patlak gibi sorunlarda lastiği doğru yöntemle değerlendirip müdahale ediyoruz.",
     intro:
-      "Her patlak lastik değişim gerektirmez. Uygun durumlarda tamir ile güvenli şekilde yola devam etmek mümkündür. Şen Oto Lastik, Aksaray, Ortaköy ve Ankara - Niğde Otobanı hattında oto lastik tamiri taleplerinde duruma göre yerinde çözüm ya da güvenli yönlendirme sunar.",
+      "Her patlak lastik değişim gerektirmez. Uygun durumlarda tamir ile güvenli şekilde yola devam etmek mümkündür. Şen Oto Lastik, Aksaray, Ortaköy ve Niğde hattında oto lastik tamiri taleplerinde duruma göre yerinde çözüm ya da güvenli yönlendirme sunar.",
     image: "/images/yerinde-lastik-degisimi.jpg",
     imageAlt: "Yerinde oto lastik tamiri ve lastik kontrolü yapan ekip",
     highlights: [
@@ -335,7 +263,6 @@ const servicePages: LandingPage[] = [
       "Patlak tamiri, hava kaçağı tespiti ve lastik zararını büyütmeden yapılabilecek bazı müdahaleler yerinde uygulanabilir.",
     ),
     relatedLinks: [
-      otobanSupportLink,
       baseServiceLinks[0],
       baseServiceLinks[1],
       baseServiceLinks[3],
@@ -358,7 +285,7 @@ const servicePages: LandingPage[] = [
     type: "service",
     metaTitle: "Aksaray Yerinde Lastik Değişimi | 7/24 Lastik Değişimi",
     metaDescription:
-      "Aksaray, Ortaköy ve Ankara - Niğde Otobanı hattında yerinde lastik değişimi, stepne değişimi ve 7/24 mobil lastik desteği için Şen Oto Lastik'i arayın.",
+      "Aksaray, Ortaköy ve Niğde hattında yerinde lastik değişimi, stepne değişimi ve 7/24 mobil lastik desteği için Şen Oto Lastik'i arayın.",
     title: "Aksaray'da Yerinde Lastik Değişimi",
     eyebrow: "Değişim Hizmeti",
     badge: "7/24 Lastik Değişimi",
@@ -371,7 +298,7 @@ const servicePages: LandingPage[] = [
     highlights: [
       "Stepne değişimi ve lastik sökme-takma",
       "Gece ve acil saatlerde destek",
-      "Ankara - Niğde Otobanı dahil saha planı",
+      "Niğde hattı dahil saha planı",
     ],
     quickFacts: ["Stepne desteği", "Acil değişim", "Saha ekipmanı"],
     sections: [
@@ -395,9 +322,9 @@ const servicePages: LandingPage[] = [
         ],
       },
       {
-        title: "Aksaray ve Ankara - Niğde otoban geçişlerinde 7/24 destek",
+        title: "Aksaray ve Niğde hattında 7/24 destek",
         paragraphs: [
-          "Ortaköy / Aksaray çıkışlı saha desteğimiz, merkez ve çevre bağlantı yollarında lastik değişimi ihtiyacını hızlı karşılamak için planlanır. Uygun rotada kalan Ankara - Niğde Otobanı çağrıları da aynı sistem içinde değerlendirilir.",
+          "Ortaköy / Aksaray çıkışlı saha desteğimiz, merkez ve çevre bağlantı yollarında lastik değişimi ihtiyacını hızlı karşılamak için planlanır. Uygun rotada kalan Niğde hattı çağrıları da aynı sistem içinde değerlendirilir.",
         ],
       },
     ],
@@ -407,7 +334,6 @@ const servicePages: LandingPage[] = [
       "Stepne değişimi, sökme-takma ve uygun durumlarda lastik tamiri ile değişim gereksinimi sahada çözülebilir.",
     ),
     relatedLinks: [
-      otobanSupportLink,
       baseServiceLinks[0],
       baseServiceLinks[1],
       baseServiceLinks[2],
@@ -472,7 +398,7 @@ const servicePages: LandingPage[] = [
       "Evet. Aksaray merkez ve uygun çevre güzergahlarda gelen çağrılarda ekibimiz doğrudan konuma yönlendirilir.",
       "Yol yardım kapsamında lastik tamiri, lastik değişimi, stepne desteği ve mobil lastik servisi planlanabilir.",
     ),
-    relatedLinks: [...baseServiceLinks, otobanSupportLink, citySupportLinks[1], citySupportLinks[2]],
+    relatedLinks: [...baseServiceLinks, citySupportLinks[1], citySupportLinks[2]],
     ctaTitle: "Aksaray'da acil lastik desteği mi lazım?",
     ctaText:
       "Bulunduğunuz noktayı paylaşın, Aksaray yol yardım hattımız çağrınızı hızla değerlendirsin. Tek hedefimiz sizi bekletmeden çözüme ulaştırmak.",
@@ -536,7 +462,7 @@ const servicePages: LandingPage[] = [
       "Ortaköy ve çevresinde evet. Acil çağrılarda konum teyidi sonrası ekibimiz en uygun rota ile yönlendirilir.",
       "Lastik tamiri, stepne değişimi, yerinde lastik değişimi ve mobil lastik servisi ihtiyaçları bu hatta yönetilir.",
     ),
-    relatedLinks: [...baseServiceLinks, otobanSupportLink, citySupportLinks[0], citySupportLinks[2]],
+    relatedLinks: [...baseServiceLinks, citySupportLinks[0], citySupportLinks[2]],
     ctaTitle: "Ortaköy oto lastik ve yol yardım için tek hat",
     ctaText:
       "Yerel bir işletme gibi hızlı cevap veren, sahada çözüm üreten bir ekiple ilerlemek istiyorsanız hemen arayın veya WhatsApp'tan yazın.",
@@ -597,11 +523,11 @@ const citySeeds: CityPageSeed[] = [
     slug: "nigde-yol-yardim",
     city: "Niğde",
     opening:
-      "Niğde hattındaki kullanıcılar çoğunlukla şehirler arası yolda veya Ankara - Niğde Otobanı geçişinde acil lastik desteği arar.",
+      "Niğde hattındaki kullanıcılar çoğunlukla şehirler arası yolda veya Niğde yönlü geçişlerde acil lastik desteği arar.",
     routeDetail:
-      "Niğde yol yardım sayfasında özellikle Ankara - Niğde Otobanı'nda full hizmet verdiğimizi, stepne değişimi ve patlak lastik desteğini öne çıkarıyoruz.",
+      "Niğde yol yardım sayfasında özellikle bu hatta verdiğimiz hızlı yönlendirme, stepne değişimi ve patlak lastik desteğini öne çıkarıyoruz.",
     note:
-      "Ankara - Niğde Otobanı ve yakın bölgelerdeki taleplerde çağrı uygunluğu rota ve anlık yoğunluğa göre netleşir. İlk aramada açık lokasyon bilgisi verilmesi müdahale hızını ciddi şekilde artırır.",
+      "Niğde hattı ve yakın bölgelerdeki taleplerde çağrı uygunluğu rota ve anlık yoğunluğa göre netleşir. İlk aramada açık lokasyon bilgisi verilmesi müdahale hızını ciddi şekilde artırır.",
     secondaryKeyword: "niğde lastik değişimi",
   },
   {
@@ -619,9 +545,9 @@ const citySeeds: CityPageSeed[] = [
     slug: "ankara-yol-yardim",
     city: "Ankara",
     opening:
-      "Ankara aramalarında kullanıcı özellikle Ankara - Niğde Otobanı üzerinde güvenilir ve samimi bir yol yardım alternatifi görmek ister.",
+      "Ankara aramalarında kullanıcı özellikle Niğde yönlü hatta güvenilir ve samimi bir yol yardım alternatifi görmek ister.",
     routeDetail:
-      "Bu sayfa Ankara yol yardım intentine karşılık verirken Ankara - Niğde Otobanı üzerindeki yoğun desteğimizi ve Şen Oto Lastik'in Aksaray merkezli saha bakışını net biçimde ortaya koyar.",
+      "Bu sayfa Ankara yol yardım intentine karşılık verirken Niğde yönlü hat üzerindeki yoğun desteğimizi ve Şen Oto Lastik'in Aksaray merkezli saha bakışını net biçimde ortaya koyar.",
     note:
       "Ankara yönlü taleplerde rota uygunluğu ve yol planı hızlı şekilde değerlendirilir. Hangi tip desteğin mümkün olduğu ilk görüşmede açıkça paylaşılır.",
     secondaryKeyword: "ankara mobil lastik servisi",
@@ -680,7 +606,7 @@ const cityPages: LandingPage[] = citySeeds.map((seed) => ({
     seed.note,
     `${seed.city} odaklı çağrılarda yerinde lastik değişimi, patlak lastik tamiri ve mobil lastik servisi planlanabilir. Uygun çözüm araç tipi ve arıza durumuna göre belirlenir.`,
   ),
-  relatedLinks: [...baseServiceLinks, otobanSupportLink, citySupportLinks[0], citySupportLinks[1]],
+  relatedLinks: [...baseServiceLinks, citySupportLinks[0], citySupportLinks[1]],
   ctaTitle: `${seed.city} için hızlı lastik desteği alın`,
   ctaText:
     `${seed.city} yol yardım veya ${seed.secondaryKeyword} ihtiyacınız varsa bizi arayın. Araç bilgisi ve konumla birlikte en doğru yönlendirmeyi hızla paylaşalım.`,

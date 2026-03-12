@@ -17,7 +17,7 @@ export function ServiceAreaSection({ compact = false }: ServiceAreaSectionProps)
         <SectionHeading
           eyebrow="Hizmet Alanı"
           title="Aksaray çıkışlı saha, otobanda yoğun destek"
-          description="Hizmeti iki net bölgede anlatıyoruz: Aksaray / Ortaköy çıkışlı saha ve Ankara - Niğde Otobanı yoğunluk hattı."
+          description="Hizmeti iki net bölgede anlatıyoruz: Aksaray / Ortaköy çıkışlı saha ve Niğde hattı öncelikli destek bölgesi."
         />
         <div className="mt-8 grid gap-4 lg:grid-cols-2">
           {serviceAreaCards.map((card, index) => {
