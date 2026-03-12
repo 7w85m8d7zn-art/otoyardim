@@ -42,6 +42,84 @@ strong {
   font-weight: 700;
 }
 
+@layer components {
+  .section-kicker {
+    @apply text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-300/90;
+  }
+
+  .section-title {
+    @apply font-display text-3xl leading-[1.02] text-white sm:text-4xl xl:text-[3.2rem];
+  }
+
+  .hero-title {
+    @apply font-display text-4xl leading-[0.96] text-white sm:text-5xl xl:text-[3.95rem];
+  }
+
+  .section-copy {
+    @apply text-sm leading-7 text-slate-300 sm:text-base;
+  }
+
+  .section-copy-strong {
+    @apply text-sm leading-7 text-slate-200 sm:text-base;
+  }
+
+  .card-title {
+    @apply font-display text-[1.55rem] leading-[1.04] text-white;
+  }
+
+  .small-heading {
+    @apply text-sm font-semibold uppercase tracking-[0.14em] text-white;
+  }
+
+  .copy-soft {
+    @apply text-sm leading-7 text-slate-300;
+  }
+
+  .copy-strong {
+    @apply text-sm leading-7 text-slate-100;
+  }
+
+  .action-btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl px-5 py-3.5 text-sm font-semibold transition;
+  }
+
+  .action-btn-primary {
+    @apply bg-ember text-white hover:bg-orange-500;
+  }
+
+  .action-btn-secondary {
+    @apply border border-emerald-500/30 bg-emerald-500/10 text-white hover:bg-emerald-500/20;
+  }
+
+  .action-btn-ghost {
+    @apply border border-white/10 bg-white/[0.04] text-slate-100 hover:bg-white/[0.08];
+  }
+
+  .info-pill {
+    @apply rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-100;
+  }
+
+  .info-pill-amber {
+    @apply rounded-full border border-amber-300/20 bg-amber-300/10 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-100;
+  }
+
+  .info-pill-emerald {
+    @apply rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-100;
+  }
+
+  .overlay-chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/55 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-md;
+  }
+
+  .number-pill {
+    @apply inline-flex min-w-10 justify-center rounded-full border border-amber-300/20 bg-amber-300/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-amber-100;
+  }
+
+  .surface-panel {
+    @apply rounded-[1.8rem] border border-white/10 bg-black/20;
+  }
+}
+
 .hazard-strip {
   background-image: repeating-linear-gradient(
     135deg,

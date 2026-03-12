@@ -15,9 +15,9 @@ import {
 } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Aksaray ve Niğde Hattında 7/24 Yol Yardım",
+  title: "Şen Oto Lastik | Aksaray ve Niğde Hattında Hızlı Lastik Desteği",
   description:
-    "Şen Oto Lastik; Ortaköy / Aksaray merkezli 7/24 yol yardım, mobil lastik servisi, yerinde lastik değişimi ve Niğde hattında öncelikli destek sunar.",
+    "Şen Oto Lastik; Ortaköy / Aksaray merkezli yol yardım, mobil lastik servisi, lastik tamiri ve Niğde hattında öncelikli saha desteğini tek merkezden yönetir.",
   path: "/",
   image: "/images/aksaray-yol-yardim.jpg",
   keywords: [
@@ -66,17 +66,17 @@ export default function HomePage() {
         ]}
       />
       <HeroSection
-        eyebrow="Niğde Hattı Öncelikli Destek"
-        title="Aksaray ve Niğde hattında 7/24 yol yardım"
-        description="Şen Oto Lastik, Ortaköy / Aksaray çıkışlı ekibiyle özellikle Niğde hattı ve Aksaray çevresindeki yol yardım çağrılarına hızlı dönüş yapar. Yolda kaldığınız anda arama, konum ve yönlendirme sürecini kısa tutarız."
+        eyebrow="Şen Oto Lastik / Niğde Hattı Önceliği"
+        title="Aksaray ve Niğde hattında doğru lastik desteğine hızlı geçin"
+        description="Şen Oto Lastik, Ortaköy / Aksaray çıkışlı yapısıyla yol yardım, mobil servis, lastik tamiri ve yerinde değişim hizmetlerini tek merkezden yönlendirir. Özellikle Niğde hattındaki acil çağrılarda önce doğru hizmeti, sonra en hızlı saha akışını kurarız."
         image="/images/aksaray-yol-yardim.jpg"
         imageAlt="Aksaray ve Niğde hattı için yol yardım saha aracı"
         highlights={[
-          "Niğde hattında öncelikli saha desteği",
-          "Ortaköy / Aksaray çıkışlı hızlı lokasyon teyidi",
-          "Yol yardım, stepne değişimi ve mobil lastik müdahalesi",
+          "Niğde hattında öncelikli yol yardım ve saha planı",
+          "Mobil lastik servisi, tamir ve değişim için net hizmet geçişi",
+          "Ortaköy / Aksaray çıkışlı hızlı lokasyon teyidi ve 7/24 iletişim",
         ]}
-        badge="Niğde hattı öncelikli hizmet"
+        badge="Ortaköy / Aksaray çıkışlı ekip"
       />
       <TrustBar />
       <ServicesSection />

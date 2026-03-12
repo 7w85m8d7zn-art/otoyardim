@@ -167,6 +167,16 @@ export const serviceAreaCards = [
     title: "Aksaray / Ortaköy çıkışlı ana saha",
     description:
       "Ana operasyon yapımız Aksaray, Ortaköy ve bağlantı yollarındaki yol yardım çağrılarını hızlı karşılamak için kurgulandı. Mobil lastik, tamir ve değişim hizmetleri bu merkezden yönetilir.",
+    areas: [
+      "Aksaray Merkez",
+      "Ortaköy",
+      "Sultanhanı",
+      "Eskil",
+      "Ağaçören",
+      "Gülağaç",
+      "Güzelyurt",
+      "Sarıyahşi",
+    ],
     bullets: [
       "Aksaray merkez ve Ortaköy çıkışlı yönlendirme",
       "Şehir içi, ilçe yolları ve yakın bağlantılarda öncelikli destek",
@@ -177,6 +187,7 @@ export const serviceAreaCards = [
     title: "Niğde hattı öncelikli destek alanı",
     description:
       "Niğde yönlü hatta ve otoban bağlantılarında gelen çağrıları öncelikli değerlendiriyor, uygun rota ve yoğunluk durumunda hızlı saha planı oluşturuyoruz.",
+    areas: ["Niğde Merkez", "Bor", "Ulukışla", "Çiftlik", "Altunhisar", "Çamardı"],
     bullets: [
       "Niğde hattında hızlı konum teyidi ve güvenli iletişim",
       "Patlak lastik, stepne değişimi ve acil yol yardımı",

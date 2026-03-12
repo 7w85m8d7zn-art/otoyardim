@@ -14,17 +14,17 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-black/70">
       <Container className="py-12 sm:py-16">
         <div className="grid gap-8 xl:grid-cols-[1.15fr_0.85fr_0.85fr]">
-          <div className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-amber-300/90">
+          <div className="surface-panel p-6">
+            <p className="section-kicker">
               Şen Oto Lastik
             </p>
-            <p className="mt-3 inline-flex rounded-full border border-amber-300/20 bg-amber-300/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-100">
+            <p className="info-pill-amber mt-3 px-4">
               {siteConfig.heritageLabel}
             </p>
-            <h2 className="mt-4 font-display text-4xl uppercase leading-[0.95] text-white">
+            <h2 className="mt-4 font-display text-[2.2rem] leading-[0.95] text-white sm:text-[2.6rem]">
               Aksaray ve Niğde hattında 7/24 yol yardım
             </h2>
-            <p className="mt-4 text-sm leading-7 text-slate-300">
+            <p className="section-copy mt-4">
               Ağırlıklı olarak Aksaray, Ortaköy ve Niğde hattındaki yol yardım çağrılarına
               odaklanıyoruz. Mobil lastik, değişim ve tamir hizmetlerini de aynı saha modeli içinde
               yönetiyoruz.
@@ -61,12 +61,8 @@ export function Footer() {
           <FooterColumn title="Şehir Sayfaları" links={footerCityLinks} />
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-slate-400 lg:flex-row lg:items-center lg:justify-between">
-          <p>
-            2026 {siteConfig.name}. {siteConfig.foundingYear}'den beri Ortaköy / Aksaray merkezli
-            mobil lastik ve yol yardım markası.
-          </p>
-          <p>Aksaray, Ortaköy ve Niğde hattında aktif saha desteği.</p>
+        <div className="mt-10 border-t border-white/10 pt-6 text-sm text-slate-400">
+          <p>Copyright © Şen Oto Yol Yardım 2026</p>
         </div>
       </Container>
     </footer>
@@ -81,7 +77,7 @@ type FooterColumnProps = {
 function FooterColumn({ title, links }: FooterColumnProps) {
   return (
     <div>
-      <h2 className="text-sm font-bold uppercase tracking-[0.22em] text-white">{title}</h2>
+      <h2 className="small-heading tracking-[0.18em]">{title}</h2>
       <div className="mt-4 grid gap-3">
         {links.map((link) => (
           <Link

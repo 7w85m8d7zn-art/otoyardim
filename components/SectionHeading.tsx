@@ -15,17 +15,9 @@ export function SectionHeading({
 
   return (
     <div className={`max-w-2xl ${alignmentClass}`}>
-      {eyebrow ? (
-        <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-300/90">
-          {eyebrow}
-        </p>
-      ) : null}
-      <h2 className="font-display text-3xl leading-[1.02] text-white sm:text-4xl md:text-5xl">
-        {title}
-      </h2>
-      {description ? (
-        <p className="mt-4 text-sm leading-7 text-slate-300 sm:text-base">{description}</p>
-      ) : null}
+      {eyebrow ? <p className="section-kicker mb-3">{eyebrow}</p> : null}
+      <h2 className="section-title">{title}</h2>
+      {description ? <p className="section-copy mt-4">{description}</p> : null}
     </div>
   );
 }

@@ -31,67 +31,35 @@ function ServicePageContent({ page }: PageContentProps) {
 
   return (
     <>
-      <section className="pb-6">
+      <section className="border-t border-white/10 py-14 sm:py-20">
         <Container>
-          <div className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
-            <article className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-300/90">
-                Hizmet Özeti
-              </p>
-              <p className="mt-3 text-sm leading-7 text-slate-200">{page.intro}</p>
-
-              {leadSection ? (
-                <div className="mt-6 rounded-[1.4rem] border border-white/10 bg-black/20 p-5">
-                  <h2 className="font-display text-[1.8rem] leading-[1] text-white">
-                    {leadSection.title}
-                  </h2>
-                  <div className="mt-3 space-y-3 text-sm leading-7 text-slate-300">
-                    {leadSection.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </div>
-                  <BulletList bullets={leadSection.bullets} />
-                </div>
-              ) : null}
-            </article>
-
-            <aside className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-300/90">
-                Hızlı Karar Notları
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
+          <div className="grid gap-10 lg:grid-cols-[0.68fr_1.32fr]">
+            <div>
+              <p className="section-kicker">Hizmet Özeti</p>
+              <p className="section-copy-strong mt-4 text-base leading-8">{page.intro}</p>
+              <div className="mt-6 flex flex-wrap gap-2">
                 {page.quickFacts.map((fact) => (
-                  <span
-                    key={fact}
-                    className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-100"
-                  >
+                  <span key={fact} className="info-pill">
                     {fact}
                   </span>
                 ))}
               </div>
+            </div>
 
-              {supportSection ? (
-                <div className="mt-5 rounded-[1.4rem] border border-white/10 bg-black/20 p-5">
-                  <h2 className="text-lg font-semibold text-white">{supportSection.title}</h2>
-                  <div className="mt-3 space-y-3 text-sm leading-6 text-slate-300">
-                    {supportSection.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </div>
-                  <BulletList bullets={supportSection.bullets} />
-                </div>
-              ) : null}
-            </aside>
+            <div className="grid gap-8">
+              {leadSection ? <OpenContentBand section={leadSection} /> : null}
+              {supportSection ? <OpenContentBand section={supportSection} /> : null}
+            </div>
           </div>
         </Container>
       </section>
 
       {detailSections.length > 0 ? (
-        <section className="py-6 sm:py-8">
+        <section className="py-14 sm:py-20">
           <Container>
-            <div className="grid gap-4 lg:grid-cols-2">
+            <div className="grid gap-10 lg:grid-cols-2">
               {detailSections.map((section) => (
-                <ContentCard key={section.title} section={section} />
+                <OpenContentBand key={section.title} section={section} />
               ))}
             </div>
           </Container>
@@ -114,72 +82,60 @@ function LocalPageContent({ page }: PageContentProps) {
 
   return (
     <>
-      <section className="pb-6">
+      <section className="border-t border-white/10 py-14 sm:py-20">
         <Container>
-          <div className="grid gap-4 lg:grid-cols-[0.92fr_1.08fr]">
-            <article className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-300/90">
-                Yerel Arama Özeti
-              </p>
-              <p className="mt-3 text-sm leading-7 text-slate-200">{page.intro}</p>
-
-              <div className="mt-6 grid gap-3">
+          <div className="grid gap-10 lg:grid-cols-[0.68fr_1.32fr]">
+            <div>
+              <p className="section-kicker">Bölge Özeti</p>
+              <p className="section-copy-strong mt-4 text-base leading-8">{page.intro}</p>
+              <ul className="mt-6 space-y-3">
                 {page.highlights.map((highlight) => (
-                  <div
-                    key={highlight}
-                    className="rounded-[1.35rem] border border-white/10 bg-black/20 px-4 py-3 text-sm leading-6 text-slate-100"
-                  >
-                    {highlight}
-                  </div>
+                  <li key={highlight} className="flex gap-3 text-sm leading-7 text-slate-200">
+                    <span className="mt-2 h-2 w-2 rounded-full bg-amber-300" />
+                    <span>{highlight}</span>
+                  </li>
                 ))}
-              </div>
-            </article>
+              </ul>
+            </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
-              {intentSection ? <ContentCard section={intentSection} /> : null}
-              {serviceSection ? <ContentCard section={serviceSection} /> : null}
+            <div className="grid gap-8 lg:grid-cols-2">
+              {intentSection ? <OpenContentBand section={intentSection} /> : null}
+              {serviceSection ? <OpenContentBand section={serviceSection} /> : null}
             </div>
           </div>
         </Container>
       </section>
 
       {processSection ? (
-        <section className="py-6 sm:py-8">
+        <section className="py-14 sm:py-20">
           <Container>
-            <div className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6">
-              <div className="grid gap-5 lg:grid-cols-[1fr_0.9fr] lg:items-start">
-                <ContentBlock section={processSection} />
-                <div className="rounded-[1.5rem] border border-white/10 bg-black/20 p-5">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-300/90">
-                    Yerel Sinyal
-                  </p>
-                  <p className="mt-3 text-sm leading-7 text-slate-300">
-                    Bu şehir sayfası tek başına anasayfa gibi davranmıyor; kullanıcıyı doğru hizmet
-                    sayfasına ve doğrudan iletişime yönlendiren ara durak olarak çalışıyor.
-                  </p>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {page.quickFacts.map((fact) => (
-                      <span
-                        key={fact}
-                        className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-200"
-                      >
-                        {fact}
-                      </span>
-                    ))}
-                  </div>
+            <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr]">
+              <OpenContentBand section={processSection} />
+              <aside className="border-t border-white/10 pt-6">
+                <p className="section-kicker">Bölge Notu</p>
+                <p className="section-copy mt-4">
+                  Bu şehir sayfası bulunduğunuz bölgeden gelen çağrıyı doğru hizmete ve doğrudan
+                  iletişime yönlendiren kısa bir geçiş noktası gibi çalışır.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {page.quickFacts.map((fact) => (
+                    <span key={fact} className="info-pill">
+                      {fact}
+                    </span>
+                  ))}
                 </div>
-              </div>
+              </aside>
             </div>
           </Container>
         </section>
       ) : null}
 
       {extraSections.length > 0 ? (
-        <section className="py-6 sm:py-8">
+        <section className="py-14 sm:py-20">
           <Container>
-            <div className="grid gap-4 lg:grid-cols-2">
+            <div className="grid gap-10 lg:grid-cols-2">
               {extraSections.map((section) => (
-                <ContentCard key={section.title} section={section} />
+                <OpenContentBand key={section.title} section={section} />
               ))}
             </div>
           </Container>
@@ -197,29 +153,21 @@ function LocalPageContent({ page }: PageContentProps) {
   );
 }
 
-type ContentCardProps = {
+type OpenContentBandProps = {
   section: ContentSection;
 };
 
-function ContentCard({ section }: ContentCardProps) {
+function OpenContentBand({ section }: OpenContentBandProps) {
   return (
-    <article className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6">
-      <ContentBlock section={section} />
-    </article>
-  );
-}
-
-function ContentBlock({ section }: ContentCardProps) {
-  return (
-    <>
-      <h2 className="font-display text-[1.8rem] leading-[1] text-white">{section.title}</h2>
-      <div className="mt-3 space-y-3 text-sm leading-7 text-slate-300">
+    <article className="border-t border-white/10 pt-6">
+      <h2 className="card-title text-[1.7rem] leading-[1.05]">{section.title}</h2>
+      <div className="section-copy mt-4 space-y-3">
         {section.paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
       </div>
       <BulletList bullets={section.bullets} />
-    </>
+    </article>
   );
 }
 
@@ -233,9 +181,9 @@ function BulletList({ bullets }: BulletListProps) {
   }
 
   return (
-    <ul className="mt-4 space-y-2.5 text-sm leading-6 text-slate-200">
+    <ul className="mt-5 space-y-3">
       {bullets.map((bullet) => (
-        <li key={bullet} className="flex gap-3">
+        <li key={bullet} className="flex gap-3 text-sm leading-7 text-slate-200">
           <span className="mt-2 h-2 w-2 rounded-full bg-amber-300" />
           <span>{bullet}</span>
         </li>

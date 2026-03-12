@@ -11,7 +11,7 @@ export function GallerySection() {
         <SectionHeading
           eyebrow="Görsel Güven"
           title="Gerçek hizmet hissi veren çalışma sahası"
-          description="SEO dostu görsel dosya adları, açıklayıcı alt metinler ve güven uyandıran fotoğraf düzeni ile yerel marka algısını güçlendiriyoruz."
+          description="Açıklayıcı görseller, net kadrajlar ve düzenli fotoğraf akışı ile sahadaki hizmet yapımızı daha güven veren biçimde gösteriyoruz."
         />
         <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {galleryItems.map((item) => (
@@ -38,4 +38,3 @@ export function GallerySection() {
     </section>
   );
 }
-

@@ -79,7 +79,7 @@ const servicePages: LandingPage[] = [
     metaDescription:
       "Aksaray, Ortaköy ve Niğde hattında 7/24 yol yardım, patlak lastik desteği, stepne değişimi ve mobil müdahale için Şen Oto Lastik'e ulaşın.",
     title: "Aksaray'da 7/24 Yol Yardım",
-    eyebrow: "Yerel Hizmet SEO",
+    eyebrow: "Acil Destek",
     badge: "Niğde Hattı Dahil Hizmet",
     description:
       "Yolda kaldığınız anda Aksaray ve yakın hatlarda hızlı yönlendirme, yerinde lastik desteği ve güven veren iletişim sunuyoruz.",
@@ -357,7 +357,7 @@ const servicePages: LandingPage[] = [
     metaDescription:
       "Aksaray yol yardım 7/24 hizmeti, mobil lastik servisi, yerinde lastik değişimi ve oto lastik tamiri için Şen Oto Lastik'e ulaşın.",
     title: "Aksaray Yol Yardım 7/24",
-    eyebrow: "Aksaray Yerel Sayfa",
+    eyebrow: "Aksaray Bölgesi",
     badge: "Aksaray Merkez Operasyon",
     description:
       "Aksaray'da yol yardım arayan sürücüler için hızlı ulaşım, yerinde lastik desteği ve güven veren saha organizasyonu.",
@@ -389,7 +389,7 @@ const servicePages: LandingPage[] = [
       {
         title: "Bu sayfadan nereye geçilir",
         paragraphs: [
-          "Bu sayfa özellikle yol yardım arayan kullanıcıyı mobil lastik servisi, lastik tamiri ve yerinde lastik değişimi sayfalarına yönlendirmek için kurgulandı. Böylece arama niyetine göre daha spesifik bilgiye hızlıca ulaşılabilir.",
+          "Bu sayfa özellikle yol yardım arayan kullanıcıyı mobil lastik servisi, lastik tamiri ve yerinde lastik değişimi sayfalarına yönlendirmek için hazırlandı. Böylece ihtiyacınıza en yakın bilgiye daha hızlı ulaşabilirsiniz.",
         ],
       },
     ],
@@ -402,7 +402,7 @@ const servicePages: LandingPage[] = [
     ctaTitle: "Aksaray'da acil lastik desteği mi lazım?",
     ctaText:
       "Bulunduğunuz noktayı paylaşın, Aksaray yol yardım hattımız çağrınızı hızla değerlendirsin. Tek hedefimiz sizi bekletmeden çözüme ulaştırmak.",
-    callout: "Google'da Aksaray yol yardım arayan kullanıcılar için hızlı, net ve yerel bir çözüm sayfası.",
+    callout: "Aksaray için hızlı, net ve doğrudan iletişime taşıyan kısa bir çözüm sayfası.",
     keywords: [
       "aksaray yol yardım",
       "aksaray yol yardım 7/24",
@@ -417,7 +417,7 @@ const servicePages: LandingPage[] = [
     metaDescription:
       "Ortaköy / Aksaray oto lastik, mobil lastik servisi, lastik tamiri, lastik değişimi ve yol yardım için 7/24 Şen Oto Lastik'e ulaşın.",
     title: "Ortaköy Oto Lastik Hizmetleri",
-    eyebrow: "Ortaköy Yerel Sayfa",
+    eyebrow: "Ortaköy / Aksaray",
     badge: "Ortaköy / Aksaray",
     description:
       "Ortaköy'de oto lastik, yol yardım ve mobil servis ihtiyacında hızlı dönüş yapan yerel saha desteği.",
@@ -433,9 +433,9 @@ const servicePages: LandingPage[] = [
     quickFacts: ["Ortaköy merkezli", "Atölye + saha desteği", "7/24 iletişim"],
     sections: [
       {
-        title: "Yerel oto lastik markası gibi görünmek yetmez",
+        title: "Yerel güven tek başına yetmez",
         paragraphs: [
-          "Kullanıcı için güven veren unsur sadece lokasyon değil, ihtiyaca göre çözüm sunabilmektir. Ortaköy'de lastik tamiri arayan biri ile yolda kalan sürücünün ihtiyacı farklıdır; bu yüzden sayfayı hem atölye hem mobil destek algısını güçlendirecek şekilde kurguladık.",
+          "Kullanıcı için güven veren unsur sadece lokasyon değil, ihtiyaca göre çözüm sunabilmektir. Ortaköy'de lastik tamiri arayan biri ile yolda kalan sürücünün ihtiyacı farklıdır; bu yüzden bu sayfada hem atölye hem mobil destek akışını birlikte anlattık.",
           "Ortaköy merkezli olmak, çevre yollar ve Aksaray genelinde daha hızlı saha planı yapılmasını destekler.",
         ],
       },
@@ -451,9 +451,9 @@ const servicePages: LandingPage[] = [
         ],
       },
       {
-        title: "Google Maps ve yerel güven sinyali",
+        title: "Google Maps ve açık konum bilgisi",
         paragraphs: [
-          "Ortaköy / Aksaray adres bilgisinin, çalışma saatlerinin ve harita entegrasyonunun açık biçimde sunulması yerel SEO için önemlidir. Bu sayfa kullanıcıya hem fiziksel merkez hem de saha desteği modeli olduğunu net biçimde anlatır.",
+          "Ortaköy / Aksaray adres bilgisinin, çalışma saatlerinin ve harita entegrasyonunun açık biçimde sunulması kullanıcı güveni için önemlidir. Bu sayfa hem fiziksel merkezimizi hem de saha desteği modelimizi net biçimde anlatır.",
         ],
       },
     ],
@@ -466,7 +466,7 @@ const servicePages: LandingPage[] = [
     ctaTitle: "Ortaköy oto lastik ve yol yardım için tek hat",
     ctaText:
       "Yerel bir işletme gibi hızlı cevap veren, sahada çözüm üreten bir ekiple ilerlemek istiyorsanız hemen arayın veya WhatsApp'tan yazın.",
-    callout: "Bu sayfa yerel marka algısını güçlendirirken yol yardım intentini de destekler.",
+    callout: "Bu sayfa hem yerel güveni güçlendirir hem de yol yardım ile mobil servis bağlantısını açık biçimde gösterir.",
     keywords: [
       "ortaköy oto lastik",
       "ortaköy lastikçi",
@@ -560,22 +560,22 @@ const cityPages: LandingPage[] = citySeeds.map((seed) => ({
   metaTitle: `${seed.city} Yol Yardım | 7/24 Mobil Lastik Desteği`,
   metaDescription: `${seed.city} yol yardım, mobil lastik servisi, yerinde lastik değişimi ve patlak lastik desteği için Şen Oto Lastik ile 7/24 iletişime geçin.`,
   title: `${seed.city} Yol Yardım`,
-  eyebrow: "Şehir Landing Page",
-  badge: `${seed.city} Hedeflemeli Sayfa`,
+  eyebrow: "Bölge Hizmeti",
+  badge: `${seed.city} ve yakın hatlar`,
   description:
     `${seed.city} ve bağlantı güzergahlarında acil lastik desteği arayan kullanıcılar için hızlı iletişim ve pratik yönlendirme odaklı içerik.`,
   intro: `${seed.opening} ${seed.routeDetail} ${seed.note}`,
   image: "/images/aksaray-yol-yardim.jpg",
   imageAlt: `${seed.city} yol yardım aramalarına yönelik mobil lastik servis görseli`,
   highlights: [
-    `${seed.city} yol yardım aramalarına uygun içerik`,
+    `${seed.city} odaklı hızlı yönlendirme`,
     "7/24 çağrı ve WhatsApp hattı",
     "Mobil lastik servisi ve yerinde değişim bağlantısı",
   ],
   quickFacts: ["7/24 iletişim", "Mobil destek", seed.secondaryKeyword],
   sections: [
     {
-      title: `${seed.city} yol yardım aramalarında öne çıkan ihtiyaç`,
+      title: `${seed.city} için öne çıkan ihtiyaçlar`,
       paragraphs: [
         seed.opening,
         `${seed.city} için hazırlanan bu sayfada amaç, kullanıcının yalnızca bir telefon numarası değil; gerçekten hangi hizmeti alacağını anlayabileceği net bir yapı sunmaktır.`,
@@ -585,7 +585,7 @@ const cityPages: LandingPage[] = citySeeds.map((seed) => ({
       title: `${seed.city} için hangi hizmetler öne çıkar`,
       paragraphs: [
         `Yol yardım, mobil lastik servisi, lastik tamiri ve yerinde lastik değişimi bu sayfanın ana hizmet kümeleridir. ${seed.routeDetail}`,
-        `${seed.city} aramalarında kullanıcı niyeti çoğu zaman acildir; bu yüzden metinlerde dönüşüm odaklı ama doğal bir dil kullandık.`,
+        `${seed.city} tarafındaki çağrılarda ihtiyaç çoğu zaman acildir; bu yüzden metni kısa, doğal ve doğrudan iletişime taşıyan bir yapıda tuttuk.`,
       ],
       bullets: [
         "Patlak lastik desteği",
@@ -597,7 +597,7 @@ const cityPages: LandingPage[] = citySeeds.map((seed) => ({
       title: `${seed.city} çağrılarında süreç nasıl ilerler`,
       paragraphs: [
         seed.note,
-        `${seed.city} hedeflemeli bu sayfa, hem SEO değeri taşır hem de kullanıcıyı doğrudan arama veya WhatsApp temasına götürür.`,
+        `${seed.city} için hazırlanan bu sayfa kullanıcıyı doğrudan arama veya WhatsApp temasına götüren kısa bir geçiş noktası gibi çalışır.`,
       ],
     },
   ],
@@ -610,7 +610,7 @@ const cityPages: LandingPage[] = citySeeds.map((seed) => ({
   ctaTitle: `${seed.city} için hızlı lastik desteği alın`,
   ctaText:
     `${seed.city} yol yardım veya ${seed.secondaryKeyword} ihtiyacınız varsa bizi arayın. Araç bilgisi ve konumla birlikte en doğru yönlendirmeyi hızla paylaşalım.`,
-  callout: `${seed.city} sayfası doğal şehir bazlı SEO ve güçlü dönüşüm copy'si için veri odaklı üretildi.`,
+  callout: `${seed.city} için hazırlanan bu sayfa hızlı iletişim ve doğru hizmet geçişi için sade tutuldu.`,
   keywords: [
     `${seed.city.toLocaleLowerCase("tr-TR")} yol yardım`,
     seed.secondaryKeyword,

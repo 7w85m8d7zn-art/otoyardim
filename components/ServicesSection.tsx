@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LifeBuoy, RefreshCcw, Truck, Wrench } from "lucide-react";
+import { ArrowUpRight, LifeBuoy, RefreshCcw, Truck, Wrench } from "lucide-react";
 
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -16,43 +16,50 @@ export function ServicesSection() {
   const featuredServices = serviceCards.slice(0, 4);
 
   return (
-    <section className="py-12 sm:py-16">
+    <section className="py-14 sm:py-20">
       <Container>
-        <SectionHeading
-          eyebrow="Ana Hizmetler"
-          title="En çok aranan dört hizmet"
-          description="Kullanıcının çoğunlukla aradığı destekler bunlar: yol yardım, otoban hattı, mobil servis ve yerinde müdahale."
-        />
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
-          {featuredServices.map((service) => {
-            const Icon = iconMap[service.icon];
+        <div className="grid gap-10 lg:grid-cols-[0.68fr_1.32fr] lg:items-start">
+          <SectionHeading
+            eyebrow="Ana Hizmetler"
+            title="Acil ihtiyacı doğrudan çözen net hizmetler"
+            description="Yol yardım, mobil lastik servisi, yerinde değişim ve tamir sayfalarını daha hızlı karşılaştırabilmeniz için içerikleri sade bir akışta topladık."
+          />
 
-            return (
-              <Link
-                key={service.href}
-                href={service.href}
-                className="group rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-5 shadow-card transition hover:-translate-y-1 hover:border-amber-300/30 hover:bg-white/[0.05]"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-ember/20 bg-gradient-to-br from-ember/20 to-blaze/10 text-blaze">
-                    <Icon className="h-5 w-5" />
+          <div className="border-t border-white/10">
+            {featuredServices.map((service, index) => {
+              const Icon = iconMap[service.icon];
+
+              return (
+                <Link
+                  key={service.href}
+                  href={service.href}
+                  className="group grid gap-5 border-b border-white/10 py-6 transition hover:border-amber-300/30 md:grid-cols-[64px_1fr_auto] md:items-start"
+                >
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] font-display text-lg leading-none text-amber-300">
+                    0{index + 1}
                   </div>
-                  {service.badge ? (
-                    <span className="rounded-full border border-amber-300/20 bg-amber-300/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-amber-100">
-                      {service.badge}
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-ember/20 bg-ember/10 text-blaze">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="card-title">
+                        {service.title}
+                      </h3>
+                      <p className="copy-soft mt-3 max-w-2xl">{service.description}</p>
+                    </div>
+                  </div>
+
+                  <div className="md:justify-self-end">
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03]">
+                      <ArrowUpRight className="h-5 w-5 shrink-0 text-amber-300 transition group-hover:text-white" />
                     </span>
-                  ) : null}
-                </div>
-                <h3 className="mt-4 font-display text-2xl leading-[1] text-white">
-                  {service.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-300">{service.description}</p>
-                <p className="mt-4 text-sm font-semibold uppercase tracking-[0.16em] text-amber-300">
-                  Sayfaya Git
-                </p>
-              </Link>
-            );
-          })}
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </Container>
     </section>

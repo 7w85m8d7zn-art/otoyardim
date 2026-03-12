@@ -21,7 +21,7 @@ export function Header() {
               <span className="font-display text-3xl uppercase leading-none text-white">Ş</span>
             </div>
             <div className="min-w-0">
-              <p className="truncate font-display text-[1.55rem] leading-none tracking-[0.05em] text-white sm:text-[1.7rem]">
+              <p className="truncate font-display text-[1.45rem] leading-none tracking-[0.04em] text-white sm:text-[1.6rem]">
                 Şen Oto Lastik
               </p>
               <div className="mt-2 hidden flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 sm:flex">
@@ -63,7 +63,7 @@ export function Header() {
           <div className="hidden items-center gap-3 md:flex">
             <Link
               href={siteConfig.phoneHref}
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-ember to-blaze px-5 py-3 text-sm font-bold text-white shadow-glow transition hover:scale-[1.02]"
+              className="action-btn rounded-full bg-gradient-to-r from-ember to-blaze px-5 text-white shadow-glow hover:scale-[1.02]"
             >
               <PhoneCall className="h-4 w-4" />
               Hemen Ara
@@ -104,7 +104,7 @@ export function Header() {
               <Link
                 href={siteConfig.phoneHref}
                 onClick={() => setIsOpen(false)}
-                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-ember px-4 py-3 text-sm font-bold text-white"
+                className="action-btn action-btn-primary px-4"
               >
                 <PhoneCall className="h-4 w-4" />
                 Hemen Ara
@@ -114,7 +114,7 @@ export function Header() {
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setIsOpen(false)}
-                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm font-bold text-white"
+                className="action-btn action-btn-secondary px-4"
               >
                 <MessageCircleMore className="h-4 w-4 text-emerald-400" />
                 WhatsApp'tan Ulaş
@@ -124,7 +124,7 @@ export function Header() {
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setIsOpen(false)}
-                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm font-bold text-white"
+                className="action-btn action-btn-ghost px-4"
               >
                 <MapPin className="h-4 w-4 text-amber-300" />
                 Konum Al

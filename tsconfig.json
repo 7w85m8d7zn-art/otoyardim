@@ -36,6 +36,28 @@
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "components/AboutPreview.tsx",
+    "components/AreaPageTemplate.tsx",
+    "components/BlogPreviewSection.tsx",
+    "components/CTASticky.tsx",
+    "components/Contact.tsx",
+    "components/FAQ.tsx",
+    "components/FloatingWhatsApp.tsx",
+    "components/Gallery.tsx",
+    "components/Hero.tsx",
+    "components/JantSalesSection.tsx",
+    "components/PageHero.tsx",
+    "components/ProcessSteps.tsx",
+    "components/RegionDirectory.tsx",
+    "components/SeoJsonLd.tsx",
+    "components/ServiceAreas.tsx",
+    "components/ServicePageTemplate.tsx",
+    "components/Services.tsx",
+    "components/VehicleTypes.tsx",
+    "components/WhyChooseUs.tsx",
+    "data/blog-posts.ts",
+    "lib/content.ts",
+    "lib/site.ts"
   ]
 }
