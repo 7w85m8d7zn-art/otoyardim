@@ -15,13 +15,13 @@ export const siteConfig = {
     "Merhaba, Ankara - Niğde Otobanı veya Aksaray hattı için yol yardım desteği almak istiyorum.",
   district: "Ortaköy",
   city: "Aksaray",
-  address: "Ortaköy / Aksaray, Türkiye",
+  address: "ZAFER MAH. KIRŞEHİR CAD. YENİ SANAYİ SİT. NO:1, 68400 Ortaköy/Aksaray",
   hours: "7/24 Açık",
   country: "Türkiye",
   serviceArea: "Aksaray, Ortaköy, Ankara - Niğde Otobanı ve yakın güzergahlar",
-  mapQuery: "Ortaköy Aksaray Türkiye",
+  mapQuery: "ZAFER MAH. KIRSEHIR CAD. YENI SANAYI SIT. NO:1, 68400 Ortakoy/Aksaray",
   mapEmbed:
-    "https://www.google.com/maps?q=Ortak%C3%B6y%20Aksaray%20T%C3%BCrkiye&output=embed",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.4056784849777!2d34.0715226!3d38.75439840000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d5bf66cf098ee1%3A0x78823bd4bfe5872a!2sPT%20LAST%C4%B0K-%C5%9Een%20Oto%20Lastik!5e0!3m2!1str!2str!4v1773280210804!5m2!1str!2str",
   defaultOgImage: "/images/aksaray-yol-yardim.jpg",
   email: "info@senotolastik.com",
 };
@@ -35,11 +35,9 @@ export const mapsDirectionsHref = `https://www.google.com/maps/dir/?api=1&destin
 )}`;
 
 export const navLinks: LinkItem[] = [
-  { label: "Anasayfa", href: "/" },
   { label: "Yol Yardım", href: "/yol-yardim" },
   { label: "Otoban Hattı", href: "/ankara-nigde-otobani-yol-yardim" },
   { label: "Mobil Servis", href: "/mobil-lastik-servisi" },
-  { label: "Lastik Tamiri", href: "/lastik-tamiri" },
   { label: "İletişim", href: "/#iletisim" },
 ];
 

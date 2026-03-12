@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { CTASection } from "@/components/CTASection";
-import { ContactSection } from "@/components/ContactSection";
 import { Container } from "@/components/Container";
 import { HeroSection } from "@/components/HeroSection";
 import { SchemaMarkup } from "@/components/SchemaMarkup";
@@ -31,8 +30,8 @@ export default function BlogIndexPage() {
       />
       <HeroSection
         eyebrow="SEO Blog"
-        title="Yol yardım ve lastik hakkında okunabilir rehberler"
-        description="Bilgi arayan kullanıcıları yalnızca genel içerikle değil; sahadan gelen gerçek ihtiyaçlara göre hazırlanmış, sade ve pratik Türkçe yazılarla karşılıyoruz."
+        title="Yol yardım ve lastik için kısa rehberler"
+        description="Blog tarafını da sade tuttuk. Sürücünün gerçekten işine yarayacak, sahadan gelen ihtiyaçlara göre yazılmış kısa ve net içerikler burada."
         image="/images/ortakoy-oto-lastik.jpg"
         imageAlt="Şen Oto Lastik blog sayfası için atölye ve lastik hizmet görseli"
         highlights={[
@@ -41,9 +40,10 @@ export default function BlogIndexPage() {
           "Lastik basıncı için pratik kontrol rehberleri",
         ]}
         badge="Organik Trafik Katmanı"
+        showStats={false}
       />
 
-      <section className="py-14 sm:py-20">
+      <section className="py-12 sm:py-16">
         <Container>
           <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
             {blogPosts.map((post) => (
@@ -54,10 +54,10 @@ export default function BlogIndexPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-300/90">
                   {post.category}
                 </p>
-                <h2 className="mt-4 font-display text-4xl uppercase leading-[0.95] text-white">
+                <h2 className="mt-4 font-display text-3xl leading-[1] text-white">
                   {post.title}
                 </h2>
-                <p className="mt-4 text-sm leading-7 text-slate-300">{post.excerpt}</p>
+                <p className="mt-3 text-sm leading-6 text-slate-300">{post.excerpt}</p>
                 <div className="mt-6 flex items-center justify-between text-xs uppercase tracking-[0.18em] text-slate-400">
                   <span>{post.readingTime}</span>
                   <span>{post.publishedAt}</span>
@@ -79,7 +79,6 @@ export default function BlogIndexPage() {
         title="Bilgiyi okudunuz, şimdi hizmete hızlıca ulaşın"
         description="Acil yol yardım ve mobil lastik ihtiyaçlarında doğrudan arayın. Konum paylaşımı gerekiyorsa WhatsApp hattımız da aynı anda aktif."
       />
-      <ContactSection />
     </>
   );
 }

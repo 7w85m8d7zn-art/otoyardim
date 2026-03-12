@@ -10,8 +10,10 @@ type BlogPreviewSectionProps = {
 };
 
 export function BlogPreviewSection({ posts }: BlogPreviewSectionProps) {
+  const visiblePosts = posts.slice(0, 2);
+
   return (
-    <section className="py-14 sm:py-20">
+    <section className="py-12 sm:py-16">
       <Container>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
@@ -27,8 +29,8 @@ export function BlogPreviewSection({ posts }: BlogPreviewSectionProps) {
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
-        <div className="mt-10 grid gap-4 lg:grid-cols-2 xl:grid-cols-4">
-          {posts.map((post) => (
+        <div className="mt-8 grid gap-4 lg:grid-cols-2">
+          {visiblePosts.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
@@ -37,10 +39,10 @@ export function BlogPreviewSection({ posts }: BlogPreviewSectionProps) {
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-300/90">
                 {post.category}
               </p>
-              <h3 className="mt-4 font-display text-3xl uppercase leading-[0.95] text-white">
+              <h3 className="mt-4 font-display text-2xl leading-[1] text-white">
                 {post.title}
               </h3>
-              <p className="mt-4 text-sm leading-7 text-slate-300">{post.excerpt}</p>
+              <p className="mt-3 text-sm leading-6 text-slate-300">{post.excerpt}</p>
               <div className="mt-6 flex items-center justify-between text-xs uppercase tracking-[0.18em] text-slate-400">
                 <span>{post.readingTime}</span>
                 <span>Devamını Oku</span>

@@ -16,12 +16,14 @@ export function RelatedLinks({
   description = "İhtiyacınıza en yakın hizmet veya içerik sayfasına buradan geçebilirsiniz.",
   links,
 }: RelatedLinksProps) {
+  const visibleLinks = links.slice(0, 3);
+
   return (
-    <section className="py-14 sm:py-20">
+    <section className="py-12 sm:py-16">
       <Container>
         <SectionHeading title={title} description={description} />
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {links.map((link) => (
+        <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {visibleLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}

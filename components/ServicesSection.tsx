@@ -13,23 +13,25 @@ const iconMap = {
 };
 
 export function ServicesSection() {
+  const featuredServices = serviceCards.slice(0, 4);
+
   return (
-    <section className="py-14 sm:py-20">
+    <section className="py-12 sm:py-16">
       <Container>
         <SectionHeading
           eyebrow="Ana Hizmetler"
-          title="Yoğun hattımız otoban ve yol yardım"
-          description="Ana yoğunluğumuz Ankara - Niğde Otobanı ve Aksaray hattındaki yol yardım çağrıları. Mobil lastik, değişim ve tamir hizmetlerini de bu ana akış etrafında sade ve hızlı biçimde sunuyoruz."
+          title="En çok aranan dört hizmet"
+          description="Kullanıcının çoğunlukla aradığı destekler bunlar: yol yardım, otoban hattı, mobil servis ve yerinde müdahale."
         />
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {serviceCards.map((service) => {
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          {featuredServices.map((service) => {
             const Icon = iconMap[service.icon];
 
             return (
               <Link
                 key={service.href}
                 href={service.href}
-                className="group rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6 shadow-card transition hover:-translate-y-1 hover:border-amber-300/30 hover:bg-white/[0.05]"
+                className="group rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-5 shadow-card transition hover:-translate-y-1 hover:border-amber-300/30 hover:bg-white/[0.05]"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-ember/20 bg-gradient-to-br from-ember/20 to-blaze/10 text-blaze">
@@ -41,11 +43,11 @@ export function ServicesSection() {
                     </span>
                   ) : null}
                 </div>
-                <h3 className="mt-5 font-display text-3xl uppercase leading-[0.95] text-white">
+                <h3 className="mt-4 font-display text-2xl leading-[1] text-white">
                   {service.title}
                 </h3>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{service.description}</p>
-                <p className="mt-5 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
+                <p className="mt-3 text-sm leading-6 text-slate-300">{service.description}</p>
+                <p className="mt-4 text-sm font-semibold uppercase tracking-[0.16em] text-amber-300">
                   Sayfaya Git
                 </p>
               </Link>

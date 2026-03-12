@@ -1,14 +1,10 @@
-import { BlogPreviewSection } from "@/components/BlogPreviewSection";
 import { ContactSection } from "@/components/ContactSection";
 import { FAQSection } from "@/components/FAQSection";
-import { GoogleMapSection } from "@/components/GoogleMapSection";
 import { HeroSection } from "@/components/HeroSection";
 import { SchemaMarkup } from "@/components/SchemaMarkup";
 import { ServiceAreaSection } from "@/components/ServiceAreaSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { TrustBar } from "@/components/TrustBar";
-import { WhyChooseUsSection } from "@/components/WhyChooseUsSection";
-import { blogPosts } from "@/data/blog-posts";
 import { homeFaqGroups } from "@/data/site";
 import {
   buildAutoRepairSchema,
@@ -72,7 +68,7 @@ export default function HomePage() {
       <HeroSection
         eyebrow="Otoban ve Yol Yardım Odağı"
         title="Aksaray ve Ankara - Niğde Otobanı'nda 7/24 yol yardım"
-        description="Şen Oto Lastik, Ortaköy / Aksaray çıkışlı saha desteğiyle yolda kaldığınız anda süreci uzatmadan yönlendirme yapar. Ana yoğunluğumuz Ankara - Niğde Otobanı ve Aksaray hattındaki yol yardım çağrılarıdır; mobil lastik, stepne ve yerinde müdahale ihtiyaçlarını da aynı hızla yönetiyoruz."
+        description="Şen Oto Lastik, Ortaköy / Aksaray çıkışlı ekibiyle özellikle Ankara - Niğde Otobanı ve Aksaray hattındaki yol yardım çağrılarına hızlı dönüş yapar. Yolda kaldığınız anda arama, konum ve yönlendirme sürecini kısa tutarız."
         image="/images/aksaray-yol-yardim.jpg"
         imageAlt="Aksaray ve Ankara - Niğde Otobanı için yol yardım saha aracı"
         highlights={[
@@ -83,13 +79,10 @@ export default function HomePage() {
         badge="Ankara - Niğde Otobanı yoğun destek hattı"
       />
       <TrustBar />
-      <ServiceAreaSection />
       <ServicesSection />
-      <WhyChooseUsSection />
+      <ServiceAreaSection />
       <FAQSection groups={homeFaqGroups} />
       <ContactSection />
-      <GoogleMapSection />
-      <BlogPreviewSection posts={blogPosts} />
     </>
   );
 }
