@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, Rajdhani } from "next/font/google";
+import Script from "next/script";
 import type { ReactNode } from "react";
 
 import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
@@ -89,6 +90,18 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className={`${displayFont.variable} ${bodyFont.variable} bg-asphalt text-white`}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18011883704"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18011883704');
+          `}
+        </Script>
         <div className="relative min-h-screen overflow-x-clip">
           <Header />
           <main className="pb-24 md:pb-0">{children}</main>
