@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { ContactSection } from "@/components/ContactSection";
 import { Container } from "@/components/Container";
 import { SchemaMarkup } from "@/components/SchemaMarkup";
@@ -26,6 +27,12 @@ export const metadata = buildMetadata({
 export default function ContactPage() {
   return (
     <>
+      <Script id="google-ads-conversion" strategy="afterInteractive">
+        {`
+          gtag('event', 'conversion', {'send_to': 'AW-18011883704/s9IGCNjkrIkcELiR3oxD'});
+        `}
+      </Script>
+      
       <SchemaMarkup
         data={[
           buildBreadcrumbSchema([
