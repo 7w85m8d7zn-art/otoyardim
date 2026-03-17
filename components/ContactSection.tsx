@@ -6,6 +6,14 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { siteConfig, whatsappHref } from "@/data/site";
 
+const handleConversion = () => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "conversion", {
+      send_to: "AW-18011883704/s9IGCNjkrIkcELiR3oxD",
+    });
+  }
+};
+
 export function ContactSection() {
   return (
     <section id="iletisim" className="py-14 sm:py-20">
@@ -21,6 +29,7 @@ export function ContactSection() {
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 href={siteConfig.phoneHref}
+                onClick={handleConversion}
                 className="action-btn action-btn-primary"
               >
                 <PhoneCall className="h-4 w-4" />
@@ -28,6 +37,7 @@ export function ContactSection() {
               </Link>
               <Link
                 href={whatsappHref}
+                onClick={handleConversion}
                 target="_blank"
                 rel="noreferrer"
                 className="action-btn action-btn-secondary"
